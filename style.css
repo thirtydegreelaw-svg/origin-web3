@@ -633,3 +633,64 @@ color:#cccccc;
 line-height:1.8;
 
 }
+/*==========================
+CONTACT
+==========================*/
+
+.contact{
+
+padding:120px 0;
+
+background:#111111;
+
+}
+
+.contact-form{
+
+max-width:700px;
+
+margin:auto;
+
+display:flex;
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+.contact-form input,
+.contact-form textarea{
+
+background:#181818;
+
+border:1px solid rgba(255,255,255,.08);
+
+padding:18px;
+
+border-radius:12px;
+
+color:white;
+
+font-size:16px;
+
+outline:none;
+
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+
+border-color:#D4AF37;
+
+box-shadow:0 0 15px rgba(212,175,55,.25);
+
+}
+
+.contact-form button{
+
+border:none;
+
+cursor:pointer;
+
+}
