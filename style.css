@@ -426,3 +426,94 @@ ROADMAP
     margin-bottom:12px;
     color:#cccccc;
 }
+/*==========================
+ABOUT
+==========================*/
+
+.about{
+
+padding:120px 0;
+
+background:#0B0B0B;
+
+}
+
+.about-grid{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:60px;
+
+align-items:center;
+
+}
+
+.about-left h2{
+
+font-size:48px;
+
+color:#D4AF37;
+
+margin-bottom:25px;
+
+}
+
+.about-left p{
+
+color:#bbbbbb;
+
+line-height:1.9;
+
+margin-bottom:20px;
+
+}
+
+.about-right{
+
+display:flex;
+
+flex-direction:column;
+
+gap:25px;
+
+}
+
+.about-card{
+
+background:#171717;
+
+padding:35px;
+
+border-radius:20px;
+
+border:1px solid rgba(255,255,255,.08);
+
+transition:.35s;
+
+}
+
+.about-card:hover{
+
+transform:translateY(-8px);
+
+border-color:#D4AF37;
+
+box-shadow:0 0 30px rgba(212,175,55,.25);
+
+}
+
+.about-card h3{
+
+color:#F4C430;
+
+margin-bottom:12px;
+
+}
+
+.about-card p{
+
+color:#cccccc;
+
+}
