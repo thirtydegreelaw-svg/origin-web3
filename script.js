@@ -1,17 +1,27 @@
-document.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("scroll",()=>{
 
-console.log("Origin Web3 Loaded Successfully");
+const btn=document.getElementById("topBtn");
 
-const button=document.querySelector(".btn-primary");
+if(window.scrollY>300){
 
-if(button){
+btn.style.display="block";
 
-button.addEventListener("click",function(){
+}else{
 
-alert("Welcome to Origin Web3 🚀");
-
-});
+btn.style.display="none";
 
 }
 
 });
+
+document.getElementById("topBtn").onclick=function(){
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+};
