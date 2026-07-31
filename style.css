@@ -110,3 +110,149 @@ nav ul li a:hover{
     border:2px solid #D4AF37;
     color:#D4AF37;
 }
+/* ===========================
+   HERO BACKGROUND
+=========================== */
+
+.hero{
+    background:
+    radial-gradient(circle at top right,#C1121F22,transparent 35%),
+    radial-gradient(circle at bottom left,#D4AF3722,transparent 40%),
+    #0B0B0B;
+
+    overflow:hidden;
+    position:relative;
+}
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:450px;
+    height:450px;
+
+    background:#C1121F;
+
+    filter:blur(180px);
+
+    opacity:.18;
+
+    top:-120px;
+    right:-120px;
+
+}
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:350px;
+    height:350px;
+
+    background:#D4AF37;
+
+    filter:blur(180px);
+
+    opacity:.15;
+
+    bottom:-120px;
+    left:-120px;
+
+}
+
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.btn-primary{
+
+    transition:.35s;
+
+    box-shadow:0 0 20px rgba(212,175,55,.25);
+
+}
+
+.btn-primary:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 0 35px rgba(212,175,55,.55);
+
+}
+
+
+.btn-secondary{
+
+    transition:.35s;
+
+}
+
+.btn-secondary:hover{
+
+    background:#D4AF37;
+
+    color:#000;
+
+}
+
+
+/* ===========================
+   LOGO
+=========================== */
+
+.logo{
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+}
+
+.logo span{
+
+    color:#F4C430;
+
+}
+
+
+/* ===========================
+   HERO TITLE
+=========================== */
+
+.hero h1{
+
+    line-height:1.1;
+
+    font-weight:800;
+
+    text-transform:uppercase;
+
+    max-width:900px;
+
+    margin:auto;
+
+}
+
+.hero p{
+
+    max-width:700px;
+
+    margin:30px auto;
+
+}
+
+
+/* ===========================
+   NAVBAR
+=========================== */
+
+.header{
+
+    border-bottom:1px solid rgba(255,255,255,.05);
+
+}
