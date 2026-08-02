@@ -1,0 +1,64 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="blockGrad" x1="10%" y1="0%" x2="90%" y2="100%">
+      <stop offset="0%" stop-color="#FF6E8F"/>
+      <stop offset="45%" stop-color="#E01144"/>
+      <stop offset="100%" stop-color="#8C002B"/>
+    </linearGradient>
+
+    <linearGradient id="edgeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD1DC"/>
+      <stop offset="100%" stop-color="#FF8FA8"/>
+    </linearGradient>
+
+    <radialGradient id="coreGrad" cx="35%" cy="28%" r="75%">
+      <stop offset="0%" stop-color="#FFB3C2"/>
+      <stop offset="45%" stop-color="#FF2D55"/>
+      <stop offset="100%" stop-color="#7B0018"/>
+    </radialGradient>
+
+    <radialGradient id="shadowGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF2D55" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#FF2D55" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="coreGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+
+    <filter id="shadowBlur" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+  </defs>
+
+  <ellipse cx="256" cy="460" rx="150" ry="14" fill="url(#shadowGrad)" filter="url(#shadowBlur)"/>
+
+  <line x1="176" y1="196" x2="256" y2="256" stroke="url(#blockGrad)" stroke-width="10" stroke-linecap="round"/>
+  <line x1="336" y1="196" x2="256" y2="256" stroke="url(#blockGrad)" stroke-width="10" stroke-linecap="round"/>
+  <line x1="176" y1="196" x2="176" y2="336" stroke="url(#blockGrad)" stroke-width="10" stroke-linecap="round"/>
+  <line x1="336" y1="196" x2="336" y2="336" stroke="url(#blockGrad)" stroke-width="10" stroke-linecap="round"/>
+  <line x1="256" y1="256" x2="256" y2="396" stroke="url(#blockGrad)" stroke-width="10" stroke-linecap="round"/>
+  <line x1="176" y1="336" x2="256" y2="396" stroke="url(#blockGrad)" stroke-width="10" stroke-linecap="round"/>
+  <line x1="336" y1="336" x2="256" y2="396" stroke="url(#blockGrad)" stroke-width="10" stroke-linecap="round"/>
+
+  <g stroke="#6E0020" stroke-width="1.5" stroke-linejoin="round">
+    <rect x="146" y="166" width="60" height="60" rx="10" fill="url(#blockGrad)"/>
+    <path d="M 152,174 L 200,174" stroke="url(#edgeGrad)" stroke-width="3" opacity="0.8"/>
+
+    <rect x="306" y="166" width="60" height="60" rx="10" fill="url(#blockGrad)"/>
+    <path d="M 312,174 L 360,174" stroke="url(#edgeGrad)" stroke-width="3" opacity="0.8"/>
+
+    <rect x="146" y="306" width="60" height="60" rx="10" fill="url(#blockGrad)"/>
+    <path d="M 152,314 L 200,314" stroke="url(#edgeGrad)" stroke-width="3" opacity="0.8"/>
+
+    <rect x="306" y="306" width="60" height="60" rx="10" fill="url(#blockGrad)"/>
+    <path d="M 312,314 L 360,314" stroke="url(#edgeGrad)" stroke-width="3" opacity="0.8"/>
+
+    <rect x="226" y="366" width="60" height="60" rx="10" fill="url(#blockGrad)"/>
+    <path d="M 232,374 L 280,374" stroke="url(#edgeGrad)" stroke-width="3" opacity="0.8"/>
+  </g>
+
+  <circle cx="256" cy="256" r="48" fill="#FF2D55" opacity="0.32" filter="url(#coreGlow)"/>
+  <circle cx="256" cy="256" r="38" fill="url(#coreGrad)" stroke="#6E0020" stroke-width="1.5"/>
+  <ellipse cx="246" cy="245" rx="9" ry="5" fill="#FFFFFF" opacity="0.6" transform="rotate(-30 246 245)"/>
+</svg>

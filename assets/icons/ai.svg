@@ -1,0 +1,64 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="chipGrad" x1="10%" y1="0%" x2="90%" y2="100%">
+      <stop offset="0%" stop-color="#FF6E8F"/>
+      <stop offset="45%" stop-color="#E01144"/>
+      <stop offset="100%" stop-color="#8C002B"/>
+    </linearGradient>
+
+    <linearGradient id="edgeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD1DC"/>
+      <stop offset="100%" stop-color="#FF8FA8"/>
+    </linearGradient>
+
+    <radialGradient id="coreGrad" cx="35%" cy="28%" r="75%">
+      <stop offset="0%" stop-color="#FFB3C2"/>
+      <stop offset="45%" stop-color="#FF2D55"/>
+      <stop offset="100%" stop-color="#7B0018"/>
+    </radialGradient>
+
+    <radialGradient id="shadowGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF2D55" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#FF2D55" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="coreGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+
+    <filter id="shadowBlur" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+  </defs>
+
+  <ellipse cx="256" cy="460" rx="150" ry="14" fill="url(#shadowGrad)" filter="url(#shadowBlur)"/>
+
+  <g stroke="url(#armGrad)" stroke-width="8" stroke-linecap="round">
+    <line x1="256" y1="256" x2="256" y2="146" stroke="url(#chipGrad)"/>
+    <line x1="256" y1="256" x2="341" y2="196" stroke="url(#chipGrad)"/>
+    <line x1="256" y1="256" x2="366" y2="256" stroke="url(#chipGrad)"/>
+    <line x1="256" y1="256" x2="341" y2="316" stroke="url(#chipGrad)"/>
+    <line x1="256" y1="256" x2="256" y2="366" stroke="url(#chipGrad)"/>
+    <line x1="256" y1="256" x2="171" y2="316" stroke="url(#chipGrad)"/>
+    <line x1="256" y1="256" x2="146" y2="256" stroke="url(#chipGrad)"/>
+    <line x1="256" y1="256" x2="171" y2="196" stroke="url(#chipGrad)"/>
+  </g>
+
+  <g fill="url(#chipGrad)" stroke="#6E0020" stroke-width="1.5">
+    <circle cx="256" cy="146" r="14"/>
+    <circle cx="341" cy="196" r="14"/>
+    <circle cx="366" cy="256" r="14"/>
+    <circle cx="341" cy="316" r="14"/>
+    <circle cx="256" cy="366" r="14"/>
+    <circle cx="171" cy="316" r="14"/>
+    <circle cx="146" cy="256" r="14"/>
+    <circle cx="171" cy="196" r="14"/>
+  </g>
+
+  <rect x="186" y="186" width="140" height="140" rx="24" fill="url(#chipGrad)" stroke="#6E0020" stroke-width="2"/>
+  <path d="M 202,202 L 240,202" fill="none" stroke="url(#edgeGrad)" stroke-width="4" stroke-linecap="round" opacity="0.85"/>
+
+  <circle cx="256" cy="256" r="52" fill="#FF2D55" opacity="0.32" filter="url(#coreGlow)"/>
+  <circle cx="256" cy="256" r="40" fill="url(#coreGrad)" stroke="#6E0020" stroke-width="1.5"/>
+  <path d="M 256,232 L 264,250 L 282,256 L 264,262 L 256,280 L 248,262 L 230,256 L 248,250 Z" fill="#FFFFFF" opacity="0.9"/>
+</svg>

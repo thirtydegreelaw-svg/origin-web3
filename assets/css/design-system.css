@@ -1,0 +1,36 @@
+:root{
+
+/* ========= COLORS ========= */
+
+--bg:#050505;
+--bg-card:#111111;
+
+--gold:#D4AF37;
+--gold-light:#FFD95A;
+
+--red:#FF2D55;
+--red-dark:#C1121F;
+
+--white:#FFFFFF;
+--text:#CFCFCF;
+
+/* ========= SHADOW ========= */
+
+--shadow-red:
+0 0 10px rgba(255,45,85,.5),
+0 0 30px rgba(255,45,85,.3);
+
+--shadow-gold:
+0 0 12px rgba(212,175,55,.4),
+0 0 35px rgba(212,175,55,.2);
+
+/* ========= BORDER ========= */
+
+--border:
+1px solid rgba(212,175,55,.20);
+
+/* ========= RADIUS ========= */
+
+--radius:22px;
+
+}

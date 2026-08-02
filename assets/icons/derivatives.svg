@@ -1,0 +1,62 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="barGrad" x1="10%" y1="0%" x2="90%" y2="100%">
+      <stop offset="0%" stop-color="#FF6E8F"/>
+      <stop offset="45%" stop-color="#E01144"/>
+      <stop offset="100%" stop-color="#8C002B"/>
+    </linearGradient>
+
+    <linearGradient id="edgeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD1DC"/>
+      <stop offset="100%" stop-color="#FF8FA8"/>
+    </linearGradient>
+
+    <radialGradient id="coreGrad" cx="35%" cy="28%" r="75%">
+      <stop offset="0%" stop-color="#FFB3C2"/>
+      <stop offset="45%" stop-color="#FF2D55"/>
+      <stop offset="100%" stop-color="#7B0018"/>
+    </radialGradient>
+
+    <radialGradient id="shadowGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF2D55" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#FF2D55" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="coreGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+
+    <filter id="shadowBlur" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+  </defs>
+
+  <ellipse cx="256" cy="460" rx="150" ry="14" fill="url(#shadowGrad)" filter="url(#shadowBlur)"/>
+
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <line x1="146" y1="356" x2="146" y2="146" stroke="url(#barGrad)" stroke-width="8"/>
+    <line x1="146" y1="356" x2="366" y2="356" stroke="url(#barGrad)" stroke-width="8"/>
+  </g>
+
+  <g stroke-linecap="round">
+    <line x1="182" y1="270" x2="182" y2="320" stroke="url(#barGrad)" stroke-width="6"/>
+    <rect x="170" y="284" width="24" height="46" rx="4" fill="url(#barGrad)" stroke="#6E0020" stroke-width="1.5"/>
+
+    <line x1="222" y1="220" x2="222" y2="298" stroke="url(#barGrad)" stroke-width="6"/>
+    <rect x="210" y="234" width="24" height="66" rx="4" fill="url(#barGrad)" stroke="#6E0020" stroke-width="1.5"/>
+
+    <line x1="262" y1="190" x2="262" y2="270" stroke="url(#barGrad)" stroke-width="6"/>
+    <rect x="250" y="204" width="24" height="68" rx="4" fill="url(#barGrad)" stroke="#6E0020" stroke-width="1.5"/>
+
+    <line x1="302" y1="150" x2="302" y2="220" stroke="url(#barGrad)" stroke-width="6"/>
+    <rect x="290" y="164" width="24" height="70" rx="4" fill="url(#barGrad)" stroke="#6E0020" stroke-width="1.5"/>
+  </g>
+
+  <path d="M 158,300 C 190,250 210,270 238,240 C 260,216 280,190 328,158"
+        fill="none" stroke="url(#edgeGrad)" stroke-width="6" stroke-linecap="round" opacity="0.9"/>
+  <path d="M 300,158 L 328,158 L 328,186" fill="none" stroke="url(#edgeGrad)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+
+  <circle cx="328" cy="158" r="46" fill="#FF2D55" opacity="0.3" filter="url(#coreGlow)"/>
+  <circle cx="328" cy="158" r="30" fill="url(#coreGrad)" stroke="#6E0020" stroke-width="1.5"/>
+  <path d="M 314,158 L 324,168 L 344,146" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+</svg>

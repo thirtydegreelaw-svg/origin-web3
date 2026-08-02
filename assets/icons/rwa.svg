@@ -1,0 +1,59 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bldgGrad" x1="10%" y1="0%" x2="90%" y2="100%">
+      <stop offset="0%" stop-color="#FF6E8F"/>
+      <stop offset="45%" stop-color="#E01144"/>
+      <stop offset="100%" stop-color="#8C002B"/>
+    </linearGradient>
+
+    <linearGradient id="edgeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD1DC"/>
+      <stop offset="100%" stop-color="#FF8FA8"/>
+    </linearGradient>
+
+    <radialGradient id="coreGrad" cx="35%" cy="28%" r="75%">
+      <stop offset="0%" stop-color="#FFB3C2"/>
+      <stop offset="45%" stop-color="#FF2D55"/>
+      <stop offset="100%" stop-color="#7B0018"/>
+    </radialGradient>
+
+    <radialGradient id="shadowGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF2D55" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#FF2D55" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="coreGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+
+    <filter id="shadowBlur" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+  </defs>
+
+  <ellipse cx="256" cy="460" rx="150" ry="14" fill="url(#shadowGrad)" filter="url(#shadowBlur)"/>
+
+  <path d="M 256,90 L 386,166 L 386,196 L 126,196 L 126,166 Z" fill="url(#bldgGrad)" stroke="#6E0020" stroke-width="2"/>
+  <path d="M 148,172 L 256,110" fill="none" stroke="url(#edgeGrad)" stroke-width="4" stroke-linecap="round" opacity="0.85"/>
+
+  <rect x="140" y="206" width="232" height="182" rx="10" fill="url(#bldgGrad)" stroke="#6E0020" stroke-width="2"/>
+  <path d="M 156,222 L 156,372" fill="none" stroke="url(#edgeGrad)" stroke-width="4" stroke-linecap="round" opacity="0.75"/>
+
+  <g fill="#6E0020" opacity="0.85">
+    <rect x="168" y="228" width="26" height="46" rx="4"/>
+    <rect x="216" y="228" width="26" height="46" rx="4"/>
+    <rect x="270" y="228" width="26" height="46" rx="4"/>
+    <rect x="318" y="228" width="26" height="46" rx="4"/>
+    <rect x="168" y="298" width="26" height="46" rx="4"/>
+    <rect x="318" y="298" width="26" height="46" rx="4"/>
+  </g>
+
+  <rect x="234" y="304" width="44" height="84" rx="6" fill="#6E0020" opacity="0.9"/>
+
+  <rect x="100" y="394" width="312" height="20" rx="6" fill="url(#bldgGrad)" stroke="#6E0020" stroke-width="1.5"/>
+
+  <circle cx="368" cy="196" r="50" fill="#FF2D55" opacity="0.3" filter="url(#coreGlow)"/>
+  <circle cx="368" cy="196" r="38" fill="url(#coreGrad)" stroke="#6E0020" stroke-width="1.5"/>
+  <path d="M 350,196 L 362,208 L 388,180" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+  <ellipse cx="358" cy="182" rx="8" ry="5" fill="#FFFFFF" opacity="0.6" transform="rotate(-30 358 182)"/>
+</svg>

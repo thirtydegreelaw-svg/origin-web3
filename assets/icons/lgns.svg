@@ -1,0 +1,58 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="armGrad" x1="10%" y1="0%" x2="90%" y2="100%">
+      <stop offset="0%" stop-color="#FF6E8F"/>
+      <stop offset="45%" stop-color="#E01144"/>
+      <stop offset="100%" stop-color="#8C002B"/>
+    </linearGradient>
+
+    <linearGradient id="armEdge" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD1DC"/>
+      <stop offset="100%" stop-color="#FF8FA8"/>
+    </linearGradient>
+
+    <radialGradient id="coreGrad" cx="35%" cy="28%" r="75%">
+      <stop offset="0%" stop-color="#FFB3C2"/>
+      <stop offset="45%" stop-color="#FF2D55"/>
+      <stop offset="100%" stop-color="#7B0018"/>
+    </radialGradient>
+
+    <radialGradient id="shadowGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF2D55" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#FF2D55" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="coreGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+
+    <filter id="shadowBlur" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+  </defs>
+
+  <ellipse cx="256" cy="460" rx="160" ry="14" fill="url(#shadowGrad)" filter="url(#shadowBlur)"/>
+
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <g transform="translate(256,256) rotate(0)">
+      <path d="M 26,-46 C -6,-108 -26,-158 -2,-196 C 30,-190 56,-128 26,-46 Z" fill="url(#armGrad)" stroke="#6E0020" stroke-width="1.5"/>
+      <path d="M -10,-118 C -24,-154 -14,-182 -3,-193" fill="none" stroke="url(#armEdge)" stroke-width="4" opacity="0.85"/>
+    </g>
+    <g transform="translate(256,256) rotate(90)">
+      <path d="M 26,-46 C -6,-108 -26,-158 -2,-196 C 30,-190 56,-128 26,-46 Z" fill="url(#armGrad)" stroke="#6E0020" stroke-width="1.5"/>
+      <path d="M -10,-118 C -24,-154 -14,-182 -3,-193" fill="none" stroke="url(#armEdge)" stroke-width="4" opacity="0.85"/>
+    </g>
+    <g transform="translate(256,256) rotate(180)">
+      <path d="M 26,-46 C -6,-108 -26,-158 -2,-196 C 30,-190 56,-128 26,-46 Z" fill="url(#armGrad)" stroke="#6E0020" stroke-width="1.5"/>
+      <path d="M -10,-118 C -24,-154 -14,-182 -3,-193" fill="none" stroke="url(#armEdge)" stroke-width="4" opacity="0.85"/>
+    </g>
+    <g transform="translate(256,256) rotate(270)">
+      <path d="M 26,-46 C -6,-108 -26,-158 -2,-196 C 30,-190 56,-128 26,-46 Z" fill="url(#armGrad)" stroke="#6E0020" stroke-width="1.5"/>
+      <path d="M -10,-118 C -24,-154 -14,-182 -3,-193" fill="none" stroke="url(#armEdge)" stroke-width="4" opacity="0.85"/>
+    </g>
+  </g>
+
+  <circle cx="256" cy="256" r="40" fill="#FF2D55" opacity="0.4" filter="url(#coreGlow)"/>
+  <circle cx="256" cy="256" r="30" fill="url(#coreGrad)" stroke="#6E0020" stroke-width="1"/>
+  <ellipse cx="246" cy="245" rx="8" ry="5" fill="#FFFFFF" opacity="0.6" transform="rotate(-30 246 245)"/>
+</svg>

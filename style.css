@@ -388,17 +388,14 @@ ECOSYSTEM
 
 .cards{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:30px;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
 }
 
 .card{
-    background:rgba(255,255,255,.04);
-    border:1px solid rgba(255,255,255,.08);
-    padding:40px;
-    border-radius:20px;
-    transition:.4s;
-    backdrop-filter:blur(20px);
+    padding:28px 22px;
+    border-radius:22px;
+    min-height:330px;
 }
 
 .card:hover{
@@ -1855,5 +1852,362 @@ transform:translate(-20px,35px);
 transform:translate(0,0);
 
 }
+
+}
+
+/*==============================
+ ECOSYSTEM CARDS v2
+==============================*/
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+    margin-top:60px;
+}
+
+.card{
+    position:relative;
+    padding:35px;
+    border-radius:24px;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(212,175,55,.18);
+
+    backdrop-filter:blur(20px);
+
+    transition:.45s;
+
+    overflow:hidden;
+}
+
+.card::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:-120%;
+
+width:120%;
+
+height:100%;
+
+background:linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.15),
+transparent);
+
+transition:.8s;
+
+}
+
+.card:hover::before{
+
+left:120%;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:
+
+0 0 20px rgba(255,45,85,.25),
+
+0 0 50px rgba(212,175,55,.15);
+
+border-color:#D4AF37;
+
+}
+
+.card h3{
+
+font-size:24px;
+
+margin-bottom:18px;
+
+color:#D4AF37;
+
+}
+
+.card p{
+
+line-height:1.8;
+
+color:#d7d7d7;
+
+}
+
+/*====================================
+
+ORIGIN ECOSYSTEM CARD V3
+
+====================================*/
+
+.card{
+
+position:relative;
+
+background:rgba(255,255,255,.04);
+
+border:1px solid rgba(212,175,55,.18);
+
+border-radius:24px;
+
+padding:35px;
+
+backdrop-filter:blur(20px);
+
+overflow:hidden;
+
+transition:.45s ease;
+
+}
+
+.card:hover{
+
+transform:translateY(-12px);
+
+border-color:#D4AF37;
+
+box-shadow:
+
+0 0 20px rgba(255,45,85,.25),
+
+0 0 50px rgba(212,175,55,.18);
+
+}
+
+.eco-icon{
+
+width:80px;
+
+height:80px;
+
+display:block;
+
+margin-bottom:25px;
+
+transition:.45s;
+
+}
+
+.card:hover .eco-icon{
+
+transform:scale(1.08) rotate(6deg);
+
+filter:drop-shadow(0 0 14px rgba(255,45,85,.55));
+
+}
+
+.card h3{
+
+font-size:24px;
+
+margin-bottom:16px;
+
+color:#D4AF37;
+
+}
+
+.card p{
+
+font-size:16px;
+
+line-height:1.8;
+
+color:#d8d8d8;
+
+margin-bottom:24px;
+
+}
+
+.card-link{
+
+display:inline-block;
+
+color:#ffffff;
+
+text-decoration:none;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.card-link:hover{
+
+color:#D4AF37;
+
+}
+
+/*=================================
+ORIGIN PREMIUM CARD V4
+=================================*/
+
+.cards{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+gap:35px;
+
+margin-top:70px;
+
+}
+
+.card{
+
+position:relative;
+
+background:#111111;
+
+border:1px solid rgba(212,175,55,.45);
+
+border-radius:28px;
+
+padding:45px 35px;
+
+text-align:center;
+
+overflow:hidden;
+
+transition:.45s ease;
+
+box-shadow:
+
+0 0 18px rgba(255,45,85,.12);
+
+}
+
+.card:hover{
+
+transform:translateY(-12px);
+
+box-shadow:
+
+0 0 25px rgba(255,45,85,.35),
+
+0 0 60px rgba(212,175,55,.18);
+
+}
+
+.card::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:-150%;
+
+width:120%;
+
+height:100%;
+
+background:linear-gradient(
+
+90deg,
+
+transparent,
+
+rgba(255,255,255,.12),
+
+transparent
+
+);
+
+transition:1s;
+
+}
+
+.card:hover::before{
+
+left:150%;
+
+}
+
+.card-icon{
+
+margin-bottom:28px;
+
+}
+
+.card-icon img{
+
+width:95px;
+
+height:95px;
+
+transition:.45s;
+
+}
+
+.card:hover .card-icon img{
+
+transform:scale(1.12);
+
+filter:drop-shadow(0 0 18px #FF2D55);
+
+}
+
+.card h3{
+
+font-size:34px;
+
+line-height:1.2;
+
+color:#D4AF37;
+
+margin-bottom:22px;
+
+font-weight:700;
+
+}
+
+.card p{
+
+font-size:18px;
+
+line-height:1.8;
+
+color:#d8d8d8;
+
+margin-bottom:30px;
+
+}
+
+.card-btn{
+
+display:inline-block;
+
+padding:14px 28px;
+
+border-radius:30px;
+
+border:1px solid #D4AF37;
+
+color:#D4AF37;
+
+text-decoration:none;
+
+transition:.4s;
+
+}
+
+.card-btn:hover{
+
+background:#D4AF37;
+
+color:#111;
 
 }

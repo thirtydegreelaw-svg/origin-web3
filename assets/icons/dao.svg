@@ -1,0 +1,66 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="armGrad" x1="10%" y1="0%" x2="90%" y2="100%">
+      <stop offset="0%" stop-color="#FF6E8F"/>
+      <stop offset="45%" stop-color="#E01144"/>
+      <stop offset="100%" stop-color="#8C002B"/>
+    </linearGradient>
+
+    <linearGradient id="edgeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD1DC"/>
+      <stop offset="100%" stop-color="#FF8FA8"/>
+    </linearGradient>
+
+    <radialGradient id="coreGrad" cx="35%" cy="28%" r="75%">
+      <stop offset="0%" stop-color="#FFB3C2"/>
+      <stop offset="45%" stop-color="#FF2D55"/>
+      <stop offset="100%" stop-color="#7B0018"/>
+    </radialGradient>
+
+    <radialGradient id="nodeGrad" cx="35%" cy="28%" r="75%">
+      <stop offset="0%" stop-color="#FFD1DC"/>
+      <stop offset="55%" stop-color="#E01144"/>
+      <stop offset="100%" stop-color="#7B0018"/>
+    </radialGradient>
+
+    <radialGradient id="shadowGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF2D55" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#FF2D55" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="coreGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+
+    <filter id="shadowBlur" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+  </defs>
+
+  <ellipse cx="256" cy="460" rx="150" ry="14" fill="url(#shadowGrad)" filter="url(#shadowBlur)"/>
+
+  <g transform="translate(256,256)">
+    <line x1="0" y1="0" x2="0" y2="-170" stroke="url(#armGrad)" stroke-width="10" stroke-linecap="round"/>
+    <line x1="0" y1="0" x2="161" y2="52" stroke="url(#armGrad)" stroke-width="10" stroke-linecap="round"/>
+    <line x1="0" y1="0" x2="99" y2="138" stroke="url(#armGrad)" stroke-width="10" stroke-linecap="round"/>
+    <line x1="0" y1="0" x2="-99" y2="138" stroke="url(#armGrad)" stroke-width="10" stroke-linecap="round"/>
+    <line x1="0" y1="0" x2="-161" y2="52" stroke="url(#armGrad)" stroke-width="10" stroke-linecap="round"/>
+
+    <circle cx="0" cy="-170" r="30" fill="url(#nodeGrad)" stroke="#6E0020" stroke-width="1.5"/>
+    <circle cx="161" cy="52" r="30" fill="url(#nodeGrad)" stroke="#6E0020" stroke-width="1.5"/>
+    <circle cx="99" cy="138" r="30" fill="url(#nodeGrad)" stroke="#6E0020" stroke-width="1.5"/>
+    <circle cx="-99" cy="138" r="30" fill="url(#nodeGrad)" stroke="#6E0020" stroke-width="1.5"/>
+    <circle cx="-161" cy="52" r="30" fill="url(#nodeGrad)" stroke="#6E0020" stroke-width="1.5"/>
+
+    <ellipse cx="-8" cy="-178" rx="9" ry="5" fill="#FFFFFF" opacity="0.55" transform="rotate(-25 -8 -178)"/>
+    <ellipse cx="153" cy="44" rx="9" ry="5" fill="#FFFFFF" opacity="0.55" transform="rotate(-25 153 44)"/>
+    <ellipse cx="91" cy="130" rx="9" ry="5" fill="#FFFFFF" opacity="0.55" transform="rotate(-25 91 130)"/>
+    <ellipse cx="-107" cy="130" rx="9" ry="5" fill="#FFFFFF" opacity="0.55" transform="rotate(-25 -107 130)"/>
+    <ellipse cx="-169" cy="44" rx="9" ry="5" fill="#FFFFFF" opacity="0.55" transform="rotate(-25 -169 44)"/>
+
+    <circle r="52" fill="#FF2D55" opacity="0.3" filter="url(#coreGlow)"/>
+    <circle r="42" fill="url(#coreGrad)" stroke="#6E0020" stroke-width="1.5"/>
+    <path d="M -18,4 L -6,16 L 20,-12" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+    <ellipse cx="-10" cy="-11" rx="9" ry="5" fill="#FFFFFF" opacity="0.6" transform="rotate(-30 -10 -11)"/>
+  </g>
+</svg>
