@@ -1,0 +1,192 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+viewBox="0 0 200 200">
+
+    <defs>
+
+        <!-- Red Glow -->
+
+        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+
+            <feGaussianBlur stdDeviation="5" result="blur"/>
+
+            <feMerge>
+                <feMergeNode in="blur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+
+        </filter>
+
+        <!-- Main Gradient -->
+
+        <linearGradient id="mainDrop"
+        x1="0%"
+        y1="0%"
+        x2="0%"
+        y2="100%">
+
+            <stop offset="0%" stop-color="#ff9db0"/>
+
+            <stop offset="45%" stop-color="#ff1744"/>
+
+            <stop offset="100%" stop-color="#7f0000"/>
+
+        </linearGradient>
+
+        <!-- Left -->
+
+        <linearGradient id="leftDrop"
+        x1="0%"
+        y1="0%"
+        x2="100%"
+        y2="100%">
+
+            <stop offset="0%" stop-color="#ff6b81"/>
+
+            <stop offset="100%" stop-color="#870000"/>
+
+        </linearGradient>
+
+        <!-- Right -->
+
+        <linearGradient id="rightDrop"
+        x1="100%"
+        y1="0%"
+        x2="0%"
+        y2="100%">
+
+            <stop offset="0%" stop-color="#ff6b81"/>
+
+            <stop offset="100%" stop-color="#870000"/>
+
+        </linearGradient>
+
+    </defs>
+
+    <!-- MAIN GROUP -->
+
+    <g transform="translate(100 98)"
+    filter="url(#glow)">
+
+        <!-- Top -->
+
+        <path
+
+        fill="url(#mainDrop)"
+
+        d="
+
+        M0 -46
+
+        C18 -25 22 -5 18 15
+
+        C14 30 7 38 0 38
+
+        C-7 38 -14 30 -18 15
+
+        C-22 -5 -18 -25 0 -46
+
+        Z"/>
+
+        <!-- Highlight -->
+
+        <path
+
+        d="
+
+        M-3 -38
+
+        C8 -22 9 -6 8 8
+
+        "
+
+        stroke="#ffffff"
+
+        stroke-width="3"
+
+        stroke-linecap="round"
+
+        fill="none"
+
+        opacity=".45"/>
+
+        <!-- Left -->
+
+        <path
+
+        fill="url(#leftDrop)"
+
+        d="
+
+        M-24 12
+
+        C-43 24 -46 42 -41 56
+
+        C-36 68 -28 72 -22 72
+
+        C-16 72 -10 64 -7 50
+
+        C-3 34 -8 20 -24 12
+
+        Z"/>
+
+        <!-- Right -->
+
+        <path
+
+        fill="url(#rightDrop)"
+
+        d="
+
+        M24 12
+
+        C43 24 46 42 41 56
+
+        C36 68 28 72 22 72
+
+        C16 72 10 64 7 50
+
+        C3 34 8 20 24 12
+
+        Z"/>
+
+        <!-- Bubble -->
+
+        <circle
+
+        cx="-6"
+
+        cy="14"
+
+        r="4"
+
+        fill="#ffb0bd"
+
+        opacity=".6"/>
+
+        <circle
+
+        cx="8"
+
+        cy="18"
+
+        r="3"
+
+        fill="#ffb0bd"
+
+        opacity=".55"/>
+
+        <circle
+
+        cx="0"
+
+        cy="0"
+
+        r="2"
+
+        fill="#ffffff"
+
+        opacity=".55"/>
+
+    </g>
+
+</svg>

@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 600" width="500" height="600">
+  <defs>
+    <!-- Red gradients for 3D stone effect -->
+    <radialGradient id="stone1" cx="40%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#ff6666" />
+      <stop offset="60%" stop-color="#cc0000" />
+      <stop offset="100%" stop-color="#800000" />
+    </radialGradient>
+    <radialGradient id="stone2" cx="45%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#ff9999" />
+      <stop offset="50%" stop-color="#dd2222" />
+      <stop offset="100%" stop-color="#990000" />
+    </radialGradient>
+    <radialGradient id="stone3" cx="50%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#ff8080" />
+      <stop offset="55%" stop-color="#b30000" />
+      <stop offset="100%" stop-color="#660000" />
+    </radialGradient>
+    <radialGradient id="stone4" cx="30%" cy="40%" r="75%">
+      <stop offset="0%" stop-color="#ff7777" />
+      <stop offset="50%" stop-color="#cc1111" />
+      <stop offset="100%" stop-color="#550000" />
+    </radialGradient>
+    <radialGradient id="stone5" cx="20%" cy="30%" r="80%">
+      <stop offset="0%" stop-color="#ffcccc" />
+      <stop offset="40%" stop-color="#e60000" />
+      <stop offset="100%" stop-color="#4d0000" />
+    </radialGradient>
+  </defs>
+
+  <!-- Stone 1 (Bottom - Largest) -->
+  <path d="M 60 480 
+           C 60 430, 100 410, 150 400 
+           C 180 393, 220 390, 260 395 
+           C 310 400, 360 405, 390 430 
+           C 420 455, 425 495, 400 530 
+           C 385 550, 360 565, 330 575 
+           C 300 585, 260 590, 220 590 
+           C 160 590, 110 580, 80 555 
+           C 55 535, 55 510, 60 480 Z" 
+        fill="url(#stone1)" stroke="#4d0000" stroke-width="1.5"/>
+
+  <!-- Stone 2 -->
+  <path d="M 100 420 
+           C 95 380, 120 340, 160 320 
+           C 200 298, 260 290, 320 295 
+           C 380 300, 420 310, 440 340 
+           C 460 370, 455 420, 435 455 
+           C 420 475, 380 485, 340 480 
+           C 280 472, 220 465, 170 460 
+           C 140 457, 110 445, 100 420 Z" 
+        fill="url(#stone2)" stroke="#4d0000" stroke-width="1.5"/>
+
+  <!-- Stone 3 -->
+  <path d="M 220 350 
+           C 210 320, 210 270, 230 240 
+           C 250 210, 280 195, 320 190 
+           C 360 185, 380 195, 395 220 
+           C 410 250, 405 290, 390 320 
+           C 375 345, 350 355, 320 355 
+           C 280 355, 250 365, 220 350 Z" 
+        fill="url(#stone3)" stroke="#4d0000" stroke-width="1.5"/>
+
+  <!-- Stone 4 -->
+  <path d="M 240 205 
+           C 230 185, 235 160, 250 140 
+           C 265 120, 295 110, 325 115 
+           C 355 120, 365 145, 360 170 
+           C 355 195, 340 210, 310 210 
+           C 285 210, 260 215, 240 205 Z" 
+        fill="url(#stone4)" stroke="#4d0000" stroke-width="1.5"/>
+
+  <!-- Stone 5 (Top - Smallest) -->
+  <path d="M 260 140 
+           C 255 120, 260 95, 280 80 
+           C 300 65, 320 65, 335 75 
+           C 350 85, 355 105, 345 125 
+           C 335 140, 310 145, 290 145 
+           C 275 145, 265 150, 260 140 Z" 
+        fill="url(#stone5)" stroke="#4d0000" stroke-width="1.5"/>
+</svg>

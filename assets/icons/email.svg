@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 193" width="256" height="193">
+  <!-- Envelope Background (Light Grey) -->
+  <path d="M58.2 0H197.8C229.9 0 256 26.1 256 58.2V134.8C256 166.9 229.9 193 197.8 193H58.2C26.1 193 0 166.9 0 134.8V58.2C0 26.1 26.1 0 58.2 0Z" fill="#E8EAED" />
+  
+  <!-- Red M Logo -->
+  <path d="M128 101.3L0 36.4V134.8C0 166.9 26.1 193 58.2 193H197.8C229.9 193 256 166.9 256 134.8V36.4L128 101.3Z" fill="#F14D42" />
+  
+  <!-- Envelope Flap (Transparent hole effect) -->
+  <path d="M128 83.3L0 18.2V0H256V18.2L128 83.3Z" fill="#E8EAED" />
+  
+  <!-- Inner Red Lines of the M -->
+  <path d="M128 83.3L256 0H209L128 51.7L47 0H0L128 83.3Z" fill="#F14D42" />
+</svg>

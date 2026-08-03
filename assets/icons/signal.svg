@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  
+  <!-- The Signal Blue Rounded Square Background -->
+  <rect x="0" y="0" width="120" height="120" rx="28" ry="28" fill="#3A76F0" />
+
+  <!-- The White Speech Bubble Outline -->
+  <path d="M 60 28 C 42.3 28 28 42.3 28 60 C 28 66.3 29.8 72.2 32.9 77.2 L 28.2 91.8 L 42.8 87.1 C 47.8 90.2 53.7 92 60 92 C 77.7 92 92 77.7 92 60 C 92 42.3 77.7 28 60 28 Z" 
+        fill="#FFFFFF" />
+  
+  <!-- The Blue Inner Body (Behind the dot) -->
+  <path d="M 60 35 C 46.2 35 35 46.2 35 60 C 35 64.6 36.5 68.8 38.9 72.3 L 36.5 81.5 L 45.7 79.1 C 49.2 81.5 53.4 83 58 83 C 71.8 83 83 71.8 83 58 C 83 44.2 71.8 35 58 35 L 60 35 Z" 
+        fill="#3A76F0" />
+
+  <!-- The White Center Dot (Inner circle) -->
+  <circle cx="60" cy="60" r="10" fill="#FFFFFF" />
+
+</svg>

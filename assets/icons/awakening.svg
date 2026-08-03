@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <defs>
+    <!-- Radial glow behind the icon -->
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#39ff14" stop-opacity="0.3" />
+      <stop offset="70%" stop-color="#39ff14" stop-opacity="0.05" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Dark circle background gradient -->
+    <radialGradient id="circleBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#2a2a2a" />
+      <stop offset="70%" stop-color="#111111" />
+      <stop offset="100%" stop-color="#050505" />
+    </radialGradient>
+
+    <!-- Green metallic gradient for the outer arcs -->
+    <linearGradient id="greenMetallic" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#90ff85" />
+      <stop offset="30%" stop-color="#39ff14" />
+      <stop offset="70%" stop-color="#00b800" />
+      <stop offset="100%" stop-color="#004d00" />
+    </linearGradient>
+
+    <!-- Bright green glow for the center sphere -->
+    <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="30%" stop-color="#aaffaa" />
+      <stop offset="70%" stop-color="#39ff14" />
+      <stop offset="100%" stop-color="#007a00" />
+    </radialGradient>
+
+    <!-- Floor reflection gradient -->
+    <linearGradient id="floorGlow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#39ff14" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#39ff14" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Filters for blur/glow effects -->
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="heavyGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="floorBlur">
+      <feGaussianBlur stdDeviation="2" />
+    </filter>
+  </defs>
+
+  <!-- Transparent background (just a placeholder, no actual background rect) -->
+
+  <!-- Outer ambient glow -->
+  <circle cx="150" cy="150" r="120" fill="url(#bgGlow)" />
+
+  <!-- Dashed Gold Ring (Outer border - Kept gold to match the original style) -->
+  <circle cx="150" cy="150" r="98" fill="none" stroke="#d4af37" stroke-width="1.5" stroke-dasharray="8 6" opacity="0.6" />
+  <circle cx="150" cy="150" r="95" fill="none" stroke="#d4af37" stroke-width="0.5" opacity="0.3" />
+
+  <!-- Dark Circular Background -->
+  <circle cx="150" cy="150" r="85" fill="url(#circleBg)" stroke="#333333" stroke-width="1" />
+  
+  <!-- Inner subtle green ring -->
+  <circle cx="150" cy="150" r="78" fill="none" stroke="#39ff14" stroke-width="0.5" opacity="0.2" />
+
+  <!-- ==========================
+       CENTRAL GLOWING SYMBOL
+       ========================== -->
+  <g filter="url(#softGlow)">
+    <!-- Outer four curved green spikes/branches -->
+    <!-- Top -->
+    <path d="M 150 48 C 118 80, 98 100, 98 118 C 98 125, 105 130, 112 125 C 122 115, 140 95, 150 78 C 160 95, 178 115, 188 125 C 195 130, 202 125, 202 118 C 202 100, 182 80, 150 48 Z" fill="url(#greenMetallic)" />
+    
+    <!-- Bottom -->
+    <path d="M 150 252 C 118 220, 98 200, 98 182 C 98 175, 105 170, 112 175 C 122 185, 140 205, 150 222 C 160 205, 178 185, 188 175 C 195 170, 202 175, 202 182 C 202 200, 182 220, 150 252 Z" fill="url(#greenMetallic)" />
+
+    <!-- Left -->
+    <path d="M 48 150 C 80 118, 100 98, 118 98 C 125 98, 130 105, 125 112 C 115 122, 95 140, 78 150 C 95 160, 115 178, 125 188 C 130 195, 125 202, 118 202 C 100 202, 80 182, 48 150 Z" fill="url(#greenMetallic)" />
+
+    <!-- Right -->
+    <path d="M 252 150 C 220 118, 200 98, 182 98 C 175 98, 170 105, 175 112 C 185 122, 205 140, 222 150 C 205 160, 185 178, 175 188 C 170 195, 175 202, 182 202 C 200 202, 220 182, 252 150 Z" fill="url(#greenMetallic)" />
+  </g>
+
+  <!-- Inner connection ring/bridge between the spikes -->
+  <g filter="url(#softGlow)">
+    <path d="M 130 130 L 170 130 L 170 170 L 130 170 Z" fill="none" stroke="url(#greenMetallic)" stroke-width="6" stroke-linejoin="round" opacity="0.8" />
+    <path d="M 130 130 C 140 140, 160 140, 170 130 L 170 170 C 160 160, 140 160, 130 170 Z" fill="url(#greenMetallic)" opacity="0.4" />
+  </g>
+
+  <!-- Center bright green sphere (The core) -->
+  <g filter="url(#heavyGlow)">
+    <circle cx="150" cy="150" r="14" fill="url(#centerGlow)" />
+    <!-- Tiny white highlight on the sphere -->
+    <circle cx="145" cy="145" r="3" fill="#ffffff" opacity="0.6" />
+  </g>
+
+  <!-- ==========================
+       FLOOR REFLECTION
+       ========================== -->
+  <g filter="url(#floorBlur)">
+    <ellipse cx="150" cy="215" rx="40" ry="3" fill="url(#floorGlow)" />
+    <!-- Slightly larger dimmer glow underneath -->
+    <ellipse cx="150" cy="218" rx="60" ry="5" fill="#39ff14" opacity="0.15" />
+  </g>
+
+</svg>

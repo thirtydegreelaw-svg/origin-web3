@@ -1,0 +1,12 @@
+*{
+    max-width:100%;
+}
+
+.hero,
+.hero-content,
+.hero-right,
+.energy-ring,
+.mouse-glow,
+.particles{
+    overflow:hidden;
+}

@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 550" width="600" height="550">
+  <defs>
+    <!-- Red Neon Glow Filters -->
+    <filter id="heavyGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="15" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <filter id="edgeLight">
+      <feGaussianBlur stdDeviation="2" />
+    </filter>
+
+    <!-- Red Gradients for 3D effect -->
+    <linearGradient id="headsetBody" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff6b6b" />
+      <stop offset="30%" stop-color="#cc0000" />
+      <stop offset="100%" stop-color="#4d0000" />
+    </linearGradient>
+    <linearGradient id="headsetFace" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff9999" />
+      <stop offset="40%" stop-color="#550000" />
+      <stop offset="100%" stop-color="#2a0000" />
+    </linearGradient>
+    <linearGradient id="headsetStrap" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#660000" />
+      <stop offset="50%" stop-color="#cc0000" />
+      <stop offset="100%" stop-color="#330000" />
+    </linearGradient>
+
+    <!-- Skin & Hair Base Colors -->
+    <linearGradient id="skinGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff8080" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#ff3333" stop-opacity="0.05" />
+    </linearGradient>
+
+    <!-- Background Ambient Glow -->
+    <radialGradient id="bgGlow" cx="40%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#ff3333" stop-opacity="0.25" />
+      <stop offset="50%" stop-color="#990000" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Ambient Background (No solid color, just a subtle glow for visibility) -->
+  <rect width="600" height="550" fill="url(#bgGlow)" />
+
+  <!-- Background Neon Halo Ring (Behind the subject) -->
+  <g filter="url(#heavyGlow)">
+    <ellipse cx="280" cy="250" rx="260" ry="180" fill="none" stroke="#ff2222" stroke-width="3" opacity="0.4" />
+    <ellipse cx="280" cy="250" rx="250" ry="170" fill="none" stroke="#ff5555" stroke-width="1.5" opacity="0.3" />
+  </g>
+
+  <!-- ==========================
+       HAIR (Back & Sides)
+       ========================== -->
+  <g fill="#1a0000" stroke="#ff3333" stroke-width="0.5" opacity="0.8">
+    <!-- Back hair volume -->
+    <path d="M 120 80 C 140 40, 220 20, 300 30 C 360 35, 420 50, 440 100 C 450 140, 440 180, 430 220 L 400 190 C 400 140, 370 90, 300 80 C 220 70, 160 90, 140 140 Z" />
+    <!-- Curly texture lines -->
+    <path d="M 150 100 C 160 80, 180 70, 200 80 C 220 90, 230 110, 220 130" fill="none" stroke-width="1.5" opacity="0.6" />
+    <path d="M 280 50 C 300 40, 330 45, 350 60 C 370 75, 380 100, 370 120" fill="none" stroke-width="1.5" opacity="0.6" />
+    <path d="M 380 70 C 400 80, 420 110, 415 150" fill="none" stroke-width="1.5" opacity="0.6" />
+  </g>
+
+  <!-- ==========================
+       HANDS / ARMS
+       ========================== -->
+  <!-- Left Hand (Holding headset) -->
+  <g>
+    <!-- Arm base -->
+    <path d="M 20 500 C 40 450, 60 400, 80 360 C 90 340, 100 330, 110 320 L 130 340 C 120 360, 110 380, 100 420 L 80 500 Z" fill="#2a0000" stroke="#ff5555" stroke-width="1.5" />
+    <!-- Hand/Palm -->
+    <path d="M 100 310 C 120 290, 140 280, 160 290 C 170 295, 180 310, 180 330 C 175 340, 165 345, 155 340 L 140 320 L 125 330 Z" fill="#3d0000" stroke="#ff6666" stroke-width="1.5" />
+    <!-- Fingers -->
+    <path d="M 160 290 C 165 270, 175 260, 185 265 C 195 270, 190 285, 180 300" fill="#3d0000" stroke="#ff6666" stroke-width="1.5" />
+    <path d="M 170 305 C 185 285, 195 280, 200 290 C 205 300, 195 310, 185 315" fill="#3d0000" stroke="#ff6666" stroke-width="1.5" />
+    <!-- Finger highlights -->
+    <path d="M 165 270 C 170 265, 175 268, 172 275" fill="none" stroke="#ffcccc" stroke-width="1" opacity="0.5" />
+  </g>
+
+  <!-- ==========================
+       FACE & NECK
+       ========================== -->
+  <g>
+    <!-- Neck -->
+    <path d="M 230 280 C 240 340, 250 380, 260 420 L 360 420 C 370 380, 375 340, 370 280 Z" fill="#330000" stroke="#ff4444" stroke-width="1" opacity="0.7" />
+    
+    <!-- Jaw & Cheeks -->
+    <path d="M 190 180 C 170 230, 180 280, 210 310 C 240 330, 280 340, 320 330 C 360 315, 390 280, 400 230 C 410 180, 400 140, 390 120 L 190 120 C 180 140, 180 160, 190 180 Z" fill="url(#skinGlow)" stroke="#ff5555" stroke-width="1" />
+
+    <!-- Smile / Mouth -->
+    <path d="M 260 260 C 280 275, 310 275, 330 260 C 320 285, 280 285, 260 260 Z" fill="#660000" stroke="#ff8080" stroke-width="1" />
+    <!-- Teeth hint -->
+    <path d="M 270 260 C 290 270, 305 270, 320 260" fill="none" stroke="#ffcccc" stroke-width="2" opacity="0.6" />
+    <!-- Lip glow -->
+    <path d="M 260 260 C 280 275, 310 275, 330 260" fill="none" stroke="#ff9999" stroke-width="1.5" filter="url(#softGlow)" opacity="0.6" />
+
+    <!-- Chin highlight -->
+    <path d="M 280 320 C 290 325, 300 325, 310 320" fill="none" stroke="#ff8888" stroke-width="1" opacity="0.4" />
+  </g>
+
+  <!-- ==========================
+       FRONT HAIR (Over the forehead)
+       ========================== -->
+  <g fill="#1a0000" stroke="#ff4444" stroke-width="0.5">
+    <path d="M 190 120 C 200 70, 250 50, 320 60 C 370 65, 400 90, 390 130 C 380 100, 330 80, 280 90 C 230 100, 200 110, 190 120 Z" />
+    <!-- Curls on forehead -->
+    <path d="M 220 110 C 230 90, 250 85, 260 100" fill="none" stroke-width="1.5" opacity="0.7" />
+    <path d="M 280 85 C 300 70, 320 75, 330 90" fill="none" stroke-width="1.5" opacity="0.7" />
+    <path d="M 350 80 C 370 90, 380 110, 375 130" fill="none" stroke-width="1.5" opacity="0.7" />
+  </g>
+
+  <!-- ==========================
+       VR HEADSET (Main Focus)
+       ========================== -->
+  <g filter="url(#softGlow)">
+    <!-- Side Strap (Back) -->
+    <path d="M 400 140 L 450 150 L 460 210 L 420 200 Z" fill="url(#headsetStrap)" stroke="#ff8888" stroke-width="2" />
+    <path d="M 390 170 L 430 180" stroke="#ff5555" stroke-width="1.5" opacity="0.5" />
+
+    <!-- Headset Main Body (The visor) -->
+    <path d="M 160 130 C 240 80, 380 80, 430 130 C 460 160, 470 220, 450 260 C 440 280, 420 290, 390 280 C 360 270, 340 250, 340 230 L 310 230 C 300 240, 280 250, 240 250 C 200 250, 180 240, 170 220 C 150 200, 140 160, 160 130 Z" 
+          fill="url(#headsetBody)" stroke="#ffffff" stroke-width="3" />
+          
+    <!-- Headset Front Panel (The dark screen area) -->
+    <path d="M 190 140 C 250 110, 370 110, 420 140 C 445 160, 450 210, 435 240 C 425 255, 405 260, 385 255 C 365 250, 350 235, 340 220 L 290 220 C 280 235, 260 245, 235 245 C 210 245, 195 235, 185 215 C 170 190, 170 160, 190 140 Z" 
+          fill="url(#headsetFace)" stroke="#ff9999" stroke-width="2" />
+
+    <!-- Headset Front Screen Grid (Cybernetic detail) -->
+    <g stroke="#ff4444" stroke-width="0.8" opacity="0.4" fill="none">
+      <!-- Horizontal lines -->
+      <path d="M 195 160 L 420 160 M 190 180 L 430 180 M 190 200 L 440 200 M 195 220 L 430 220 M 210 235 L 405 235" />
+      <!-- Vertical lines -->
+      <path d="M 240 120 L 240 240 M 300 115 L 300 225 M 360 115 L 360 240 M 410 130 L 415 230" />
+    </g>
+
+    <!-- Headset Highlight / Reflection (The glossy shine on top) -->
+    <path d="M 200 135 C 260 105, 360 105, 410 135 C 370 115, 280 115, 200 135 Z" fill="#ffffff" opacity="0.15" filter="url(#edgeLight)" />
+    
+    <!-- Edge LED Glow -->
+    <path d="M 190 140 C 250 110, 370 110, 420 140" fill="none" stroke="#ff0000" stroke-width="4" filter="url(#heavyGlow)" opacity="0.6" />
+    <path d="M 435 240 C 425 255, 405 260, 385 255" fill="none" stroke="#ff0000" stroke-width="4" filter="url(#heavyGlow)" opacity="0.6" />
+  </g>
+
+  <!-- ==========================
+       AMBIENT LIGHTING & SPARKLES
+       ========================== -->
+  <!-- Front rim light on the face -->
+  <path d="M 390 120 C 400 140, 410 180, 400 230" fill="none" stroke="#ffaaaa" stroke-width="2" opacity="0.4" filter="url(#softGlow)" />
+  
+  <!-- Tiny digital sparkles floating around -->
+  <g filter="url(#heavyGlow)">
+    <circle cx="480" cy="100" r="3" fill="#ff6666" opacity="0.8" />
+    <circle cx="510" cy="160" r="2" fill="#ff4444" opacity="0.6" />
+    <circle cx="80" cy="80" r="2.5" fill="#ff8888" opacity="0.7" />
+    <circle cx="530" cy="300" r="1.5" fill="#ff3333" opacity="0.5" />
+  </g>
+
+  <!-- Floor shadow reflection (Bottom edge) -->
+  <ellipse cx="280" cy="540" rx="200" ry="15" fill="#ff0000" opacity="0.1" filter="url(#heavyGlow)" />
+</svg>

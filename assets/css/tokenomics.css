@@ -1,0 +1,646 @@
+/* ==========================================
+   ORIGIN WEB3 - TOKENOMICS V3
+   PRODUCTION READY
+   ========================================== */
+
+/* ==========================================
+   SECTION BASE
+   ========================================== */
+
+.tokenomics {
+    position: relative;
+    padding: 120px 0;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at top right, rgba(255, 45, 85, 0.08), transparent 35%),
+        radial-gradient(circle at bottom left, rgba(212, 175, 55, 0.08), transparent 35%),
+        linear-gradient(180deg, #050505 0%, #090909 50%, #050505 100%);
+}
+
+/* ==========================================
+   BACKGROUND GLOWS
+   ========================================== */
+
+.tokenomics::before,
+.tokenomics::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(140px);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.tokenomics::before {
+    width: 650px;
+    height: 650px;
+    top: -250px;
+    right: -250px;
+    background: radial-gradient(circle, rgba(255, 45, 85, 0.18), transparent 70%);
+}
+
+.tokenomics::after {
+    width: 550px;
+    height: 550px;
+    left: -220px;
+    bottom: -220px;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.12), transparent 70%);
+    filter: blur(130px);
+}
+
+/* ==========================================
+   CONTAINER
+   ========================================== */
+
+.tokenomics .container {
+    position: relative;
+    z-index: 2;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+/* ==========================================
+   SECTION HEADER
+   ========================================== */
+
+.tokenomics .section-header {
+    max-width: 850px;
+    margin: 0 auto 70px;
+    text-align: center;
+}
+
+.section-tag {
+    display: inline-block;
+    padding: 10px 22px;
+    border-radius: 40px;
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    color: #D4AF37;
+    margin-bottom: 22px;
+    background: rgba(255, 255, 255, 0.03);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.section-header h2 {
+    font-size: 52px;
+    color: #fff;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+}
+
+.section-header h2 span {
+    background: linear-gradient(135deg, #D4AF37, #f5d76e, #b8962e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.section-header p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 18px;
+    line-height: 1.9;
+    max-width: 780px;
+    margin: 0 auto;
+}
+
+/* ==========================================
+   INTRO SECTION
+   ========================================== */
+
+.tokenomics-intro {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 70px;
+}
+
+.intro-left .intro-badge {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 30px;
+    color: #D4AF37;
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    background: rgba(255, 255, 255, 0.03);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 18px;
+}
+
+.intro-left h3 {
+    font-size: 40px;
+    color: #fff;
+    margin: 18px 0;
+    line-height: 1.2;
+}
+
+.intro-left h3 span {
+    background: linear-gradient(135deg, #D4AF37, #f5d76e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.intro-left p {
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.9;
+    font-size: 17px;
+    max-width: 520px;
+}
+
+/* ===== Intro Box ===== */
+.intro-box {
+    padding: 30px;
+    border-radius: 24px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+    border: 1px solid rgba(212, 175, 55, 0.15);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.intro-box h4 {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.intro-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.intro-box li {
+    color: rgba(255, 255, 255, 0.7);
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
+}
+
+.intro-box li::before {
+    content: "◆";
+    color: #D4AF37;
+    font-size: 10px;
+}
+
+.intro-box li:last-child {
+    border-bottom: none;
+}
+
+/* ==========================================
+   TOKEN CARDS
+   ========================================== */
+
+.tokenomics-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.token-card {
+    position: relative;
+    overflow: hidden;
+    padding: 35px 30px;
+    border-radius: 26px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+    border: 1px solid rgba(212, 175, 55, 0.18);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1),
+                border-color 0.45s ease,
+                box-shadow 0.45s ease;
+    will-change: transform;
+    cursor: pointer;
+    animation: tokenFade 0.8s ease both;
+}
+
+/* ===== Gradient Border ===== */
+.token-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 26px;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.35), transparent, rgba(255, 45, 85, 0.25));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0.45;
+    pointer-events: none;
+}
+
+/* ===== Shine Effect ===== */
+.token-card::before {
+    content: "";
+    position: absolute;
+    left: -180%;
+    top: 0;
+    width: 70%;
+    height: 100%;
+    background: linear-gradient(110deg, transparent, rgba(255, 255, 255, 0.16), transparent);
+    transform: skewX(-25deg);
+    transition: 1.2s;
+}
+
+.token-card:hover::before {
+    left: 180%;
+}
+
+/* ===== Hover ===== */
+.token-card:hover {
+    transform: translateY(-14px) scale(1.02);
+    border-color: #D4AF37;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.45),
+                0 0 30px rgba(255, 45, 85, 0.22),
+                0 0 70px rgba(212, 175, 55, 0.16);
+}
+
+/* ===== Card Delays ===== */
+.token-card:nth-child(1) { animation-delay: 0s; }
+.token-card:nth-child(2) { animation-delay: 0.12s; }
+.token-card:nth-child(3) { animation-delay: 0.24s; }
+.token-card:nth-child(4) { animation-delay: 0.36s; }
+.token-card:nth-child(5) { animation-delay: 0.48s; }
+.token-card:nth-child(6) { animation-delay: 0.60s; }
+.token-card:nth-child(7) { animation-delay: 0.72s; }
+.token-card:nth-child(8) { animation-delay: 0.84s; }
+
+@keyframes tokenFade {
+    0% { opacity: 0; transform: translateY(60px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ==========================================
+   CARD ICON
+   ========================================== */
+
+.token-icon {
+    width: 82px;
+    height: 82px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-bottom: 25px;
+    position: relative;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+    border: 1px solid rgba(212, 175, 55, 0.18);
+}
+
+.token-icon::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 45, 85, 0.28), transparent 70%);
+    filter: blur(16px);
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.token-card:hover .token-icon::before {
+    opacity: 1;
+}
+
+.token-icon img {
+    width: 52px;
+    height: 52px;
+    position: relative;
+    z-index: 2;
+    transition: 0.4s;
+}
+
+.token-card:hover .token-icon img {
+    transform: scale(1.12) rotate(6deg);
+    filter: drop-shadow(0 0 18px rgba(255, 45, 85, 0.55));
+}
+
+/* ==========================================
+   CARD TEXT
+   ========================================== */
+
+.token-card h3 {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 15px;
+    transition: 0.35s;
+}
+
+.token-card:hover h3 {
+    color: #D4AF37;
+}
+
+.token-card p {
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.8;
+    font-size: 16px;
+    transition: 0.35s;
+}
+
+.token-card:hover p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* ==========================================
+   CTA SECTION
+   ========================================== */
+
+.token-cta {
+    margin-top: 80px;
+    padding: 45px;
+    border-radius: 30px;
+    text-align: center;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+    border: 1px solid rgba(212, 175, 55, 0.18);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.token-cta h3 {
+    color: #fff;
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+.token-cta h3 span {
+    background: linear-gradient(135deg, #D4AF37, #f5d76e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.token-cta p {
+    max-width: 760px;
+    margin: 0 auto 35px;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.9;
+    font-size: 17px;
+}
+
+/* ==========================================
+   PROTOCOL FLOW
+   ========================================== */
+
+.protocol-flow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 45px;
+}
+
+.flow-item {
+    padding: 16px 28px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(212, 175, 55, 0.18);
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.35s ease;
+}
+
+.flow-item:hover {
+    transform: translateY(-5px);
+    border-color: #D4AF37;
+    box-shadow: 0 0 20px rgba(255, 45, 85, 0.25);
+}
+
+.flow-arrow {
+    color: #D4AF37;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* ==========================================
+   FLOATING GLOW
+   ========================================== */
+
+.tokenomics-glow {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #D4AF37;
+    box-shadow: 0 0 20px #D4AF37, 0 0 45px rgba(212, 175, 55, 0.5);
+    animation: floatGlow 9s linear infinite;
+    opacity: 0.45;
+    z-index: 1;
+    pointer-events: none;
+}
+
+@keyframes floatGlow {
+    0% { transform: translateY(40px); opacity: 0; }
+    20% { opacity: 0.45; }
+    100% { transform: translateY(-140px); opacity: 0; }
+}
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .tokenomics { padding: 100px 0; }
+    .tokenomics-intro { grid-template-columns: 1fr; gap: 30px; }
+    .intro-left p { max-width: 100%; }
+    .tokenomics-cards { grid-template-columns: repeat(2, 1fr); gap: 22px; }
+    .token-cta { padding: 35px 30px; margin-top: 60px; }
+    .protocol-flow { gap: 12px; }
+    .flow-item { padding: 14px 22px; font-size: 14px; }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .tokenomics {
+        padding: 80px 0;
+    }
+    
+    .tokenomics .container {
+        padding: 0 20px;
+    }
+    
+    .section-header h2 {
+        font-size: 36px;
+    }
+    
+    .section-header p {
+        font-size: 15px;
+    }
+    
+    .section-tag {
+        font-size: 11px;
+        padding: 8px 18px;
+    }
+    
+    .intro-left h3 {
+        font-size: 30px;
+    }
+    
+    .intro-left p {
+        font-size: 15px;
+    }
+    
+    .intro-box {
+        padding: 22px;
+    }
+    
+    .intro-box li {
+        font-size: 14px;
+        padding: 8px 0;
+    }
+    
+    .tokenomics-cards {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+    
+    .token-card {
+        padding: 26px 22px;
+        border-radius: 22px;
+    }
+    
+    .token-icon {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .token-icon img {
+        width: 42px;
+        height: 42px;
+    }
+    
+    .token-card h3 {
+        font-size: 20px;
+    }
+    
+    .token-card p {
+        font-size: 14px;
+    }
+    
+    .token-cta {
+        margin-top: 50px;
+        padding: 30px 22px;
+        border-radius: 24px;
+    }
+    
+    .token-cta h3 {
+        font-size: 26px;
+    }
+    
+    .token-cta p {
+        font-size: 15px;
+    }
+    
+    .protocol-flow {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .flow-arrow {
+        transform: rotate(90deg);
+        font-size: 18px;
+    }
+    
+    .flow-item {
+        width: 100%;
+        max-width: 250px;
+        text-align: center;
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .tokenomics { padding: 60px 0; }
+    .section-header h2 { font-size: 28px; }
+    .section-header p { font-size: 14px; }
+    .intro-left h3 { font-size: 24px; }
+    .intro-left p { font-size: 14px; }
+    .intro-box { padding: 18px; }
+    .intro-box li { font-size: 13px; }
+    .token-card { padding: 22px 18px; border-radius: 20px; }
+    .token-icon { width: 60px; height: 60px; }
+    .token-icon img { width: 36px; height: 36px; }
+    .token-card h3 { font-size: 18px; }
+    .token-card p { font-size: 13px; }
+    .token-cta h3 { font-size: 22px; }
+    .token-cta p { font-size: 14px; }
+    .flow-item { padding: 10px 16px; font-size: 13px; }
+}
+
+/* ==========================================
+   PERFORMANCE
+   ========================================== */
+
+.token-card,
+.token-card::before,
+.token-card::after,
+.token-icon {
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.token-icon img {
+    will-change: transform;
+}
+
+/* ==========================================
+   REDUCED MOTION
+   ========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .token-card {
+        animation: none;
+        opacity: 1;
+        transform: none !important;
+    }
+    
+    .token-card::before,
+    .token-icon::before {
+        display: none;
+    }
+    
+    .tokenomics-glow {
+        animation: none;
+        opacity: 0.2;
+    }
+    
+    .token-card:hover,
+    .token-card:hover .token-icon img,
+    .flow-item:hover {
+        transform: none !important;
+    }
+}
+
+/* ==========================================
+   SCROLLBAR
+   ========================================== */
+
+.tokenomics::-webkit-scrollbar {
+    width: 6px;
+}
+
+.tokenomics::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.tokenomics::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #D4AF37, #b8962e);
+    border-radius: 20px;
+}
+
+.tokenomics::-webkit-scrollbar-thumb:hover {
+    background: #D4AF37;
+}

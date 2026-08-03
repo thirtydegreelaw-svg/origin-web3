@@ -1,0 +1,604 @@
+/* ==========================================
+   ORIGIN WEB3
+   ROADMAP V3 (COMPACT + SINGLE CARD ON MOBILE)
+========================================== */
+
+/* ==========================
+   ROADMAP SECTION
+========================== */
+.roadmap {
+    position: relative;
+    padding: 80px 0;
+    overflow: hidden;
+    background: 
+        radial-gradient(circle at top left, rgba(255,45,85,.08), transparent 35%),
+        radial-gradient(circle at bottom right, rgba(212,175,55,.08), transparent 35%),
+        linear-gradient(180deg, #050505 0%, #090909 50%, #050505 100%);
+}
+
+/* ==========================
+   GLOWS (RED & GOLD)
+========================== */
+.roadmap::before {
+    content: "";
+    position: absolute;
+    width: 500px; 
+    height: 500px;
+    top: -180px;
+    left: -180px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,45,85,.18), transparent 70%);
+    filter: blur(120px);
+}
+.roadmap::after {
+    content: "";
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    right: -150px;
+    bottom: -150px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(212,175,55,.14), transparent 70%);
+    filter: blur(110px);
+}
+
+/* ==========================
+   CONTAINER & HEADER
+========================== */
+.roadmap .container { position: relative; z-index: 2; }
+.roadmap .section-header {
+    max-width: 700px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+.roadmap .section-tag {
+    display: inline-block;
+    padding: 8px 18px;
+    border-radius: 40px;
+    background: rgba(255,255,255,.03);
+    border: 1px solid rgba(212,175,55,.25);
+    color: #D4AF37;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+.roadmap .section-header h2 {
+    font-size: 42px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+.roadmap .section-header h2 span {
+    background: linear-gradient(135deg, #D4AF37, #f5d76e, #b8962e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.roadmap .section-header p {
+    color: rgba(255,255,255,.65);
+    font-size: 16px;
+    line-height: 1.8;
+    max-width: 600px;
+    margin: auto;
+}
+
+/* ==========================
+   ROADMAP GRID (COMPACT)
+========================== */
+.roadmap-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* ==========================
+   ROADMAP CARD (COMPACT)
+========================== */
+.roadmap-card {
+    position: relative;
+    overflow: hidden;
+    padding: 28px 24px;
+    border-radius: 20px;
+    background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+    border: 1px solid rgba(212,175,55,.18);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    transition: transform .45s cubic-bezier(.22,1,.36,1), box-shadow .45s, border-color .45s;
+}
+
+/* Gradient Border & Shine */
+.roadmap-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(212,175,55,.35), transparent, rgba(255,45,85,.25));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: .45;
+}
+.roadmap-card::before {
+    content: "";
+    position: absolute;
+    left: -180%;
+    top: 0;
+    width: 70%;
+    height: 100%;
+    background: linear-gradient(110deg, transparent, rgba(255,255,255,.18), transparent);
+    transform: skewX(-25deg);
+    transition: 1.2s;
+}
+.roadmap-card:hover::before { left: 180%; }
+
+/* Hover State */
+.roadmap-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    border-color: #D4AF37;
+    box-shadow: 0 12px 35px rgba(0,0,0,.45), 0 0 25px rgba(255,45,85,.22), 0 0 50px rgba(212,175,55,.18);
+}
+
+/* ==========================
+   ICON (COMPACT)
+========================== */
+.roadmap-icon {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 18px;
+    border-radius: 50%;
+    position: relative;
+    background: radial-gradient(circle, rgba(255,255,255,.08), rgba(255,255,255,.02));
+    border: 1px solid rgba(212,175,55,.18);
+}
+.roadmap-icon::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,45,85,.25), transparent 70%);
+    filter: blur(14px);
+    opacity: 0;
+    transition: .4s;
+}
+.roadmap-card:hover .roadmap-icon::before { opacity: 1; }
+
+.roadmap-icon img {
+    width: 40px;
+    height: 40px;
+    transition: .4s;
+    position: relative;
+    z-index: 2;
+}
+.roadmap-card:hover .roadmap-icon img {
+    transform: scale(1.12) rotate(8deg);
+    filter: drop-shadow(0 0 14px rgba(255,45,85,.55));
+}
+
+/* ==========================
+   STAGE BADGE
+========================== */
+.roadmap-stage {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 14px;
+    border-radius: 30px;
+    background: rgba(212,175,55,.08);
+    border: 1px solid rgba(212,175,55,.18);
+    color: #D4AF37;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    margin-bottom: 12px;
+}
+
+/* ==========================
+   CARD CONTENT (COMPACT)
+========================== */
+.roadmap-card h3 {
+    font-size: 22px;
+    color: #fff;
+    margin: 12px 0 10px;
+    transition: .35s;
+}
+.roadmap-card:hover h3 { color: #D4AF37; }
+
+.roadmap-card p {
+    color: rgba(255,255,255,.68);
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 18px;
+    transition: .35s;
+}
+.roadmap-card:hover p { color: #ffffff; }
+
+/* ==========================
+   LIST (COMPACT)
+========================== */
+.roadmap-card ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.roadmap-card ul li {
+    position: relative;
+    padding: 8px 0 8px 28px;
+    color: #d8d8d8;
+    font-size: 13px;
+    border-bottom: 1px solid rgba(255,255,255,.06);
+    transition: .35s;
+}
+.roadmap-card ul li:last-child { border-bottom: none; }
+.roadmap-card ul li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: rgba(212,175,55,.12);
+    color: #D4AF37;
+    font-size: 11px;
+    font-weight: 700;
+    transition: .35s;
+}
+.roadmap-card:hover ul li::before {
+    background: #D4AF37;
+    color: #000;
+    box-shadow: 0 0 12px rgba(212,175,55,.5);
+}
+.roadmap-card:hover ul li { color: #ffffff; }
+
+/* ==========================
+   ANIMATIONS
+========================== */
+.roadmap-card { animation: roadmapFade .8s ease both; }
+.roadmap-card:nth-child(2) { animation-delay: .15s; }
+.roadmap-card:nth-child(3) { animation-delay: .3s; }
+@keyframes roadmapFade {
+    0% { opacity: 0; transform: translateY(40px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ==========================
+   CTA (COMPACT)
+========================== */
+.roadmap-cta {
+    margin-top: 60px;
+    text-align: center;
+    padding: 35px 30px;
+    border-radius: 20px;
+    background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+    border: 1px solid rgba(212,175,55,.18);
+    backdrop-filter: blur(20px);
+}
+.roadmap-cta h3 {
+    font-size: 30px;
+    color: #fff;
+    margin-bottom: 14px;
+}
+.roadmap-cta h3 span { color: #D4AF37; }
+.roadmap-cta p {
+    max-width: 600px;
+    margin: 0 auto 24px;
+    color: rgba(255,255,255,.7);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* ==========================
+   RESPONSIVE - TABLET
+========================== */
+@media (max-width: 1024px) {
+    .roadmap { padding: 70px 0; }
+    .roadmap-grid { grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    .roadmap-card { padding: 24px 20px; }
+    .roadmap-cta { padding: 30px 24px; }
+}
+
+/* ==========================
+   RESPONSIVE - MOBILE
+   (CHANGED TO SINGLE CARD COLUMN)
+========================== */
+@media (max-width: 768px) {
+    .roadmap { padding: 60px 0; }
+    .roadmap .section-header { margin-bottom: 35px; }
+    .roadmap .section-header h2 { font-size: 30px; }
+    .roadmap .section-header p { font-size: 14px; }
+    
+    /* THIS MAKES IT A SINGLE COLUMN ON MOBILE */
+    .roadmap-grid { 
+        grid-template-columns: 1fr; 
+        gap: 20px; 
+    }
+    
+    /* Cards get a bit more width padding so they don't touch the edges */
+    .roadmap-card { 
+        padding: 24px 20px; 
+        border-radius: 18px; 
+    }
+    
+    .roadmap-icon { width: 60px; height: 60px; margin-bottom: 14px; }
+    .roadmap-icon img { width: 34px; height: 34px; }
+    .roadmap-stage { font-size: 10px; padding: 6px 12px; }
+    .roadmap-card h3 { font-size: 20px; }
+    .roadmap-card p { font-size: 14px; margin-bottom: 14px; }
+    .roadmap-card ul li { font-size: 13px; padding: 6px 0 6px 26px; }
+    .roadmap-card ul li::before { width: 16px; height: 16px; font-size: 10px; top: 6px; }
+    
+    .roadmap-cta { margin-top: 40px; padding: 24px 18px; }
+    .roadmap-cta h3 { font-size: 22px; }
+    .roadmap-cta p { font-size: 14px; }
+}
+
+/* ==========================
+   RESPONSIVE - SMALL MOBILE
+========================== */
+@media (max-width: 480px) {
+    .roadmap .section-header h2 { font-size: 26px; }
+    .roadmap-card { padding: 18px 16px; }
+    .roadmap-icon { width: 50px; height: 50px; }
+    .roadmap-icon img { width: 30px; height: 30px; }
+    .roadmap-card h3 { font-size: 18px; }
+    .roadmap-card p { font-size: 13px; }
+    .roadmap-card ul li { font-size: 12px; padding: 5px 0 5px 22px; }
+    .roadmap-cta h3 { font-size: 18px; }
+    .roadmap-cta p { font-size: 13px; }
+}
+
+/* ==========================
+   PERFORMANCE & UTILITIES
+========================== */
+.roadmap-card, .roadmap-card::before, .roadmap-card::after, .roadmap-icon {
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+.roadmap-card:hover { cursor: pointer; }
+.roadmap-card:hover .roadmap-icon { transform: rotate(6deg); }
+
+/* ==========================================
+   MOBILE FIX
+========================================== */
+
+@media (max-width:768px){
+
+    .roadmap-grid{
+
+        display:grid !important;
+
+        grid-template-columns:1fr !important;
+
+        gap:20px;
+
+    }
+
+    .roadmap-card{
+
+        width:100%;
+
+        max-width:100%;
+
+    }
+
+}
+
+/* ==========================================
+   ORIGIN WEB3 - FAQ SECTION
+========================================== */
+.faq {
+    background: linear-gradient(180deg, #0b0e14 0%, #050505 100%);
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background Glows */
+.faq::before {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    top: -100px;
+    right: -100px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(212,175,55,.08), transparent 70%);
+    filter: blur(100px);
+    z-index: 1;
+}
+
+.faq .container {
+    position: relative;
+    z-index: 2;
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ==========================
+   HEADER
+========================== */
+.faq-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.faq-tag {
+    display: inline-block;
+    padding: 6px 18px;
+    border-radius: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 45, 85, 0.25);
+    color: #ff4444;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.faq-header h2 {
+    font-size: 42px;
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.faq-header h2 span {
+    background: linear-gradient(135deg, #D4AF37, #f5d76e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.faq-header p {
+    color: rgba(255,255,255,0.6);
+    font-size: 17px;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* ==========================
+   ACCORDION LIST
+========================== */
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* ==========================
+   FAQ ITEM
+========================== */
+.faq-item {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(212, 175, 55, 0.12);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.faq-item:hover {
+    border-color: rgba(212, 175, 55, 0.4);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+/* ==========================
+   QUESTION BUTTON
+========================== */
+.faq-question {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    text-align: left;
+    transition: 0.3s;
+}
+
+.faq-question span:first-child {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: 0.3px;
+}
+
+.faq-item:hover .faq-question span:first-child {
+    color: #D4AF37;
+}
+
+/* Toggle Icon */
+.faq-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(255, 45, 85, 0.1);
+    color: #ff4444;
+    font-size: 22px;
+    font-weight: 300;
+    transition: all 0.4s ease;
+    flex-shrink: 0;
+}
+
+.faq-item:hover .faq-icon {
+    background: rgba(255, 45, 85, 0.2);
+    box-shadow: 0 0 15px rgba(255, 45, 85, 0.15);
+}
+
+/* Rotate icon when open */
+.faq-item.active .faq-icon {
+    transform: rotate(45deg);
+    background: #ff4444;
+    color: #ffffff;
+    box-shadow: 0 0 20px rgba(255, 45, 85, 0.3);
+}
+
+/* ==========================
+   ANSWER (Collapsible)
+========================== */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0.22, 1, 0.36, 1), padding 0.4s ease;
+    padding: 0 30px;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 300px; /* Adjust if you have long answers */
+    padding: 0 30px 24px 30px;
+}
+
+.faq-answer p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 15px;
+    line-height: 1.8;
+    margin: 0;
+    padding-top: 5px;
+}
+
+.faq-answer p strong {
+    color: #D4AF37;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+@media (max-width: 768px) {
+    .faq { padding: 60px 0; }
+    .faq-header h2 { font-size: 30px; }
+    .faq-header p { font-size: 15px; }
+    
+    .faq-question {
+        padding: 18px 20px;
+    }
+    .faq-question span:first-child {
+        font-size: 15px;
+    }
+    .faq-answer p {
+        font-size: 14px;
+    }
+    .faq-item.active .faq-answer {
+        padding: 0 20px 18px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .faq-header h2 { font-size: 26px; }
+    .faq-question span:first-child { font-size: 14px; }
+    .faq-icon { width: 28px; height: 28px; font-size: 18px; }
+    .faq-answer p { font-size: 13px; }
+}

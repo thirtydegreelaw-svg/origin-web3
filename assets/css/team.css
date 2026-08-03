@@ -1,0 +1,143 @@
+/* ==========================================
+   ORIGIN WEB3
+   TEAM SECTION
+========================================== */
+.team {
+    background: #111111;
+    position: relative;
+    padding: 40px 0; /* Added padding for mobile spacing */
+}
+
+/* Container */
+.team .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Grid */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+/* Card */
+.team-card {
+    background: rgba(255,255,255,.03);
+    border: 1px solid rgba(212,175,55,.18);
+    border-radius: 28px;
+    padding: 40px 30px;
+    text-align: center;
+    backdrop-filter: blur(18px);
+    transition: .45s;
+}
+.team-card:hover {
+    transform: translateY(-10px);
+    border-color: #D4AF37;
+    box-shadow: 0 0 25px rgba(255,45,85,.25), 0 0 70px rgba(212,175,55,.15);
+}
+
+/* Icon */
+.team-icon {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 42px;
+    border-radius: 50%;
+    background: rgba(212,175,55,.12);
+    border: 1px solid rgba(212,175,55,.25);
+}
+
+/* Name */
+.team-card h3 {
+    font-size: 28px;
+    color: #D4AF37;
+    margin-bottom: 10px;
+}
+
+/* Position */
+.team-card span {
+    display: block;
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Description */
+.team-card p {
+    color: #cccccc;
+    line-height: 1.8;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+/* Tablet (2 Cards Side-by-Side) */
+@media (max-width: 1200px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile (2 Cards Side-by-Side, Smaller Size) */
+@media (max-width: 768px) {
+    /* Keep 2 columns so 2 cards show in 1 row */
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px; /* Tighten the gap for mobile */
+    }
+
+    /* Make the cards much smaller/compact */
+    .team-card {
+        padding: 20px 12px; /* Reduced padding */
+        border-radius: 16px;
+    }
+
+    /* Reduce Icon Size */
+    .team-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        margin: 0 auto 12px;
+    }
+
+    /* Reduce Title Size */
+    .team-card h3 {
+        font-size: 16px;
+        margin-bottom: 4px;
+    }
+
+    /* Reduce Position Text */
+    .team-card span {
+        font-size: 12px;
+        margin-bottom: 8px;
+    }
+
+    /* Reduce Description Text */
+    .team-card p {
+        font-size: 11px;
+        line-height: 1.4;
+        color: #aaaaaa;
+    }
+}
+
+/* Small Mobile (Prevent squishing if screen is too tiny) */
+@media (max-width: 400px) {
+    .team-grid {
+        gap: 8px;
+    }
+    .team-card {
+        padding: 14px 8px;
+    }
+    .team-card h3 {
+        font-size: 14px;
+    }
+    .team-card p {
+        font-size: 10px;
+    }
+}

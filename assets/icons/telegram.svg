@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240">
+  <!-- The transparent circle background (This is the blue circle) -->
+  <circle cx="120" cy="120" r="120" fill="#26A5E4" />
+  
+  <!-- The white paper airplane logo -->
+  <path d="M 185.63 72.276 L 157.22 192.69 C 157.22 192.69 153.47 203.35 140.24 195.93 L 95.35 159.19 L 79.18 172.32 C 79.18 172.32 76.14 174.99 69.75 172.32 L 60.62 135.33 L 150.46 58.626 L 113.46 162.31 L 185.63 72.276 Z" 
+        fill="#FFFFFF" />
+</svg>

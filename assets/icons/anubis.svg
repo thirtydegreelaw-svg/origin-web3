@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 260" width="200" height="260">
+  <defs>
+    <linearGradient id="anubisRed" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"  stop-color="#ff2b4c"/>
+      <stop offset="55%" stop-color="#d4002f"/>
+      <stop offset="100%" stop-color="#7a0018"/>
+    </linearGradient>
+
+    <!-- carves the horizontal tribal banding + eye notches out of the solid silhouette -->
+    <mask id="anubisStripes">
+      <rect x="0" y="0" width="200" height="260" fill="#fff"/>
+
+      <!-- eye notches -->
+      <polygon points="76,96 92,96 84,110" fill="#000"/>
+      <polygon points="108,96 124,96 116,110" fill="#000"/>
+
+      <!-- horizontal tribal bands across the lower face / snout -->
+      <rect x="30" y="118" width="140" height="4" fill="#000"/>
+      <rect x="34" y="130" width="132" height="4" fill="#000"/>
+      <rect x="40" y="142" width="120" height="4" fill="#000"/>
+      <rect x="46" y="154" width="108" height="4" fill="#000"/>
+      <rect x="54" y="166" width="92"  height="4" fill="#000"/>
+      <rect x="62" y="178" width="76"  height="4" fill="#000"/>
+
+      <!-- subtle ear texture lines -->
+      <rect x="50" y="55" width="30" height="3" transform="rotate(-28 65 56)" fill="#000"/>
+      <rect x="120" y="55" width="30" height="3" transform="rotate(28 135 56)" fill="#000"/>
+      <rect x="58" y="70" width="26" height="3" transform="rotate(-20 71 71)" fill="#000"/>
+      <rect x="116" y="70" width="26" height="3" transform="rotate(20 129 71)" fill="#000"/>
+
+      <!-- center notch between the ears -->
+      <polygon points="92,45 108,45 100,72" fill="#000"/>
+    </mask>
+  </defs>
+
+  <!-- ============ JACKAL HEAD SILHOUETTE ============ -->
+  <g mask="url(#anubisStripes)">
+    <path
+      d="M44,28
+         C50,55 55,70 64,80
+         C72,70 80,62 84,55
+         C90,60 96,66 100,68
+         C104,66 110,60 116,55
+         C120,62 128,70 136,80
+         C145,70 150,55 156,28
+         C160,55 156,85 150,110
+         C144,128 136,140 130,150
+         C122,162 116,172 112,178
+         C107,183 103,187 100,188
+         C97,187 93,183 88,178
+         C84,172 78,162 70,150
+         C64,140 56,128 50,110
+         C44,85 40,55 44,28 Z"
+      fill="url(#anubisRed)"/>
+  </g>
+
+  <!-- ============ CROSSED COLLAR / ARMS MOTIF ============ -->
+  <path
+    d="M58,190 L142,190 L114,203 L132,213 L100,224 L68,213 L86,203 Z"
+    fill="url(#anubisRed)"/>
+  <circle cx="100" cy="234" r="6.5" fill="url(#anubisRed)"/>
+
+  <!-- ============ WORDMARK ============ -->
+  <text x="100" y="256" text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="21" letter-spacing="6"
+        fill="url(#anubisRed)">ANUBIS</text>
+
+</svg>

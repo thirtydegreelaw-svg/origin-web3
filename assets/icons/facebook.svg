@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  
+  <!-- The Blue Rounded Square Background -->
+  <rect x="0" y="0" width="120" height="120" rx="28" ry="28" fill="#1877F2" />
+
+  <!-- The White 'f' Lettering -->
+  <path d="M 68 68 L 75 68 L 77 57 L 68 57 L 68 51 C 68 48 68 45 73 45 L 77 45 L 77 35 C 76 34 72 34 67 34 C 61 34 55 38 55 47 L 55 57 L 46 57 L 46 68 L 55 68 L 55 86 L 68 86 L 68 68 Z" 
+        fill="#FFFFFF" />
+
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 90" width="120" height="90">
+  
+  <!-- YouTube Red Background (Rounded Play Button Shape) -->
+  <!-- Using a subtle gradient to make it look premium -->
+  <defs>
+    <linearGradient id="ytGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FF0000" />
+      <stop offset="100%" stop-color="#CC0000" />
+    </linearGradient>
+  </defs>
+
+  <!-- Main Red Body -->
+  <rect x="0" y="0" width="120" height="90" rx="22.5" ry="22.5" fill="url(#ytGrad)" />
+
+  <!-- White Play Triangle -->
+  <path d="M 50 25 L 83 45 L 50 65 Z" fill="#FFFFFF" />
+
+</svg>
