@@ -9,6 +9,8 @@
 
     <title>Origin Web3 | Powering the Future of Web3</title>
 
+    <link rel="icon" type="image/svg+xml" href="assets/icons/logo.svg">
+
     <!-- GLOBAL CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 
@@ -45,28 +47,31 @@
 
                 <ul>
 
-                    <li><a href="#home">Home</a></li>
+    <li><a href="#home">Home</a></li>
 
-                    <li><a href="#about">About</a></li>
+    <li><a href="#about">About</a></li>
 
-                    <li><a href="#ecosystem">Ecosystem</a></li>
+    <li><a href="#ecosystem">Ecosystem</a></li>
 
-                    <li><a href="#tokenomics">Tokenomics</a></li>
+    <li><a href="#tokenomics">Tokenomics</a></li>
 
-                    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
 
-                    <li><a href="#contact">Contact</a></li>
-                    <li>
-    <a href="admin.html" class="admin-icon" title="Admin Login">
-        🔒
-    </a>
-</li><a href="#" class="btn-primary">
+    <li><a href="#contact">Contact</a></li>
 
-    Explore Ecosystem
+    <li>
+        <a href="admin.html" class="admin-icon" title="Admin Login">
+            🔒
+        </a>
+    </li>
 
-</a>
+    <li>
+        <a href="#" id="exploreBtnNavbar" class="btn-primary">
+            Explore Ecosystem
+        </a>
+    </li>
 
-                </ul>
+</ul>
 
             </nav>
 
@@ -1402,47 +1407,11 @@ FOOTER
 <script src="assets/js/news.js"></script>
 <script src="script.js"></script>
 
-<script>
-console.log("script.js is loading");
-</script>
-
-<script>
-
-const referralLinks = [
-
-"https://origindefi.io/#/invite?code=0xc5daf38Fa16B795dC99B12cBBB1f1Bc7E85A2ad6",
-
-"https://origindefi.io/#/invite?code=0x70f353641A18ea6877d5b96502896f0680e9a146",
-
-"https://origindefi.io/#/invite?code=0xe9A27Ce1c2910b0aA4571aA1Bbd14a13089213f0",
-
-"https://origindefi.io/#/invite?code=0x8736b6C7f097021E661D8d1882AF4054400E0C99",
-
-"https://origindefi.io/#/invite?code=0xD0A25330EBEb8283E7509739BdfB8a7e8102fF35"
-
-];
-
-const exploreBtn = document.getElementById("exploreBtnRoadmap");
-
-if (exploreBtn) {
-
-    exploreBtn.addEventListener("click", function(e){
-
-        e.preventDefault();
-
-        const randomIndex = Math.floor(Math.random() * referralLinks.length);
-
-        window.open(referralLinks[randomIndex], "_blank");
-
-    });
-
-}
-
-</script>
-
 </body>
 
 </html>
+
+<!-- Deploy -->
 
 
 

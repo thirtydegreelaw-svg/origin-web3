@@ -53,8 +53,7 @@ if(hamburger && navbar){
 
         console.log("Hamburger Clicked");
 
-        navbar.classList.toggle("active");
-
+        document.querySelector("nav").classList.toggle("active");
     }
 
 }
@@ -124,9 +123,9 @@ const referralLinks = [
 // पिछला Index LocalStorage से पढ़ो
 let currentIndex = parseInt(localStorage.getItem("referralIndex")) || 0;
 
-const exploreBtn = document.getElementById("exploreBtn");
+const exploreBtns = document.querySelectorAll("#exploreBtnNavbar, #exploreBtnRoadmap");
 
-if (exploreBtn) {
+exploreBtns.forEach(function(exploreBtn){
 
     exploreBtn.addEventListener("click", function(e){
 
@@ -144,7 +143,7 @@ if (exploreBtn) {
 
     });
 
-}
+});
 
     // Save
     localStorage.setItem("referralIndex", currentIndex);
