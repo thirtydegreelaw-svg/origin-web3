@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Latest News | Origin Web3</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/news.css" />
+</head>
+<body>
+
+  <!-- ==========================================
+NEWS HERO
+========================================== -->
+
+<header class="news-hero">
+
+    <div class="container">
+
+        <a href="index.html" class="back-home">
+
+            <i class="fas fa-arrow-left"></i>
+
+            Back to Home
+
+        </a>
+
+        <span class="news-tag">
+
+            Origin Web3
+
+        </span>
+
+        <h1>
+
+            Latest <span>News</span>
+
+        </h1>
+
+        <p>
+
+            Stay updated with the latest announcements, partnerships,
+            roadmap progress, AI innovations and ecosystem developments.
+
+        </p>
+
+    </div>
+
+</header>
+
+  <!-- ==========================================
+SEARCH BAR
+========================================== -->
+
+<section class="news-search">
+
+    <div class="container">
+
+        <div class="search-box">
+
+            <i class="fas fa-search"></i>
+
+            <input
+                type="text"
+                id="searchNews"
+                placeholder="Search Origin News...">
+
+        </div>
+
+    </div>
+
+</section>
+
+  <!-- ==========================================
+CATEGORY FILTER
+========================================== -->
+
+<section class="news-filter">
+
+    <div class="container">
+
+        <div id="categoryFilter" class="filter-buttons">
+
+            <button class="active" data-category="all">
+
+                All
+
+            </button>
+
+            <button data-category="Announcement">
+
+                Announcement
+
+            </button>
+
+            <button data-category="LGNS">
+
+                LGNS
+
+            </button>
+
+            <button data-category="AI">
+
+                AI
+
+            </button>
+
+            <button data-category="Partnership">
+
+                Partnership
+
+            </button>
+
+            <button data-category="Roadmap">
+
+                Roadmap
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+  
+
+<!-- ==========================================
+LATEST NEWS
+========================================== -->
+
+<section class="news-list">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <h2>
+
+                Latest Articles
+
+            </h2>
+
+            <p>
+
+                Explore the latest updates from the Origin Web3 ecosystem.
+
+            </p>
+
+        </div>
+
+        <div id="all-news" class="news-grid">
+
+            <!-- News Cards Loaded by JavaScript -->
+
+        </div>
+
+    </div>
+
+</section>
+
+  <!-- ==========================================
+PAGINATION
+========================================== -->
+
+<section class="pagination">
+
+    <div class="container">
+
+        <div id="paginationControls">
+
+            <!-- Pagination will load here -->
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+SCRIPTS
+========================================== -->
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="assets/js/supabase.js"></script>
+
+<script src="assets/js/all-news.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
+<!-- ==========================================
+FOOTER
+========================================== -->
+
+<footer class="news-footer">
+
+    <div class="container">
+
+        <p>
+
+            © 2026 Origin Web3. All Rights Reserved.
+
+        </p>
+
+    </div>
+
+</footer>
+

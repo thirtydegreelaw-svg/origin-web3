@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Manage News | Origin Web3 CMS</title>
+
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/admin.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="cms-container">
+
+    <div class="cms-header">
+
+        <h1>📰 Manage News</h1>
+
+        <a href="dashboard.html" class="cms-btn">
+            ← Dashboard
+        </a>
+
+    </div>
+
+    <div class="table-wrapper">
+
+        <table class="news-table">
+
+            <thead>
+
+                <tr>
+
+                    <th>Image</th>
+
+                    <th>Title</th>
+
+                    <th>Category</th>
+
+                    <th>Date</th>
+
+                    <th>Action</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="newsTable">
+
+                <tr>
+
+                    <td colspan="5">
+
+                        Loading News...
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="assets/js/supabase.js"></script>
+
+<script src="assets/js/manage-news.js"></script>
+
+</body>
+
+</html>

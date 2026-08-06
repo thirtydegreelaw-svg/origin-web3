@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Edit News | Origin Web3 CMS</title>
+
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/admin.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="login-wrapper">
+
+<div class="login-box" style="max-width:850px;">
+
+<h1>Edit News</h1>
+
+<p>Update your article</p>
+
+<form id="editForm">
+
+<input
+type="text"
+id="title"
+placeholder="Title"
+required>
+
+<input
+type="text"
+id="slug"
+placeholder="Slug"
+required>
+
+<select id="category">
+
+<option>Announcement</option>
+<option>LGNS</option>
+<option>AI</option>
+<option>Partnership</option>
+<option>Roadmap</option>
+
+</select>
+
+<textarea
+id="short_description"
+rows="4"
+placeholder="Short Description"></textarea>
+
+<textarea
+id="content"
+rows="12"
+placeholder="Full Article"></textarea>
+
+<input
+type="text"
+id="image"
+placeholder="Image URL">
+
+<label>
+
+<input
+type="checkbox"
+id="featured">
+
+Featured News
+
+</label>
+
+<br><br>
+
+<button type="submit">
+
+💾 Save Changes
+
+</button>
+
+</form>
+
+<p id="message"></p>
+
+<br>
+
+<button onclick="location.href='manage-news.html'">
+
+⬅ Back
+
+</button>
+
+</div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="assets/js/supabase.js"></script>
+
+<script src="assets/js/edit-news.js"></script>
+
+</body>
+
+</html>

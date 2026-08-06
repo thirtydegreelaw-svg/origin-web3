@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Origin Web3 CMS Dashboard</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/admin.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="login-wrapper">
+
+        <div class="login-box">
+
+            <h1>Origin Web3 CMS</h1>
+
+            <p>Administrator Dashboard</p>
+
+            <br>
+
+            <button id="addNews">
+                ➕ Add News
+            </button>
+
+            <br><br>
+
+            <button id="manageNews">
+                📰 Manage News
+            </button>
+
+            <br><br>
+
+            <button id="logout">
+                🚪 Logout
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="assets/js/supabase.js"></script>
+
+    <script>
+
+        // Logout
+        document.getElementById("logout").addEventListener("click", async () => {
+
+            await client.auth.signOut();
+
+            window.location.href = "admin.html";
+
+        });
+
+        // Add News
+        document.getElementById("addNews").addEventListener("click", () => {
+
+            window.location.href = "add-news.html";
+
+        });
+
+        // Manage News
+        document.getElementById("manageNews").addEventListener("click", () => {
+
+            window.location.href = "manage-news.html";
+
+        });
+
+    </script>
+
+</body>
+
+</html>

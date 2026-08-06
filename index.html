@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="assets/css/animation.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="assets/css/contact.css">
+    <link rel="stylesheet" href="assets/css/news.css">
 
 </head>
 
@@ -40,7 +41,7 @@
     <span>Origin <b>Web3</b></span>
 </div>
 
-            <nav>
+            <nav id="navbar">
 
                 <ul>
 
@@ -55,6 +56,15 @@
                     <li><a href="#roadmap">Roadmap</a></li>
 
                     <li><a href="#contact">Contact</a></li>
+                    <li>
+    <a href="admin.html" class="admin-icon" title="Admin Login">
+        🔒
+    </a>
+</li><a href="#" class="btn-primary">
+
+    Explore Ecosystem
+
+</a>
 
                 </ul>
 
@@ -67,9 +77,7 @@
 </div>
 
 
-            <a href="#" class="launch-btn">
-                Launch App
-            </a>
+            
 
         </div>
 
@@ -153,7 +161,6 @@ HERO SECTION
 
 </div>
 
-</section>
 
 </section>   <!-- Ecosystem Ends Here -->
 
@@ -646,7 +653,9 @@ ROADMAP
         <div class="roadmap-cta">
             <h3>Building the Future of <span>Origin Web3</span></h3>
             <p>Origin continues to evolve through innovation in decentralized finance, privacy technology, algorithmic economics and global community governance.</p>
-            <a href="#" class="btn-primary">Explore Ecosystem</a>
+            <a href="#" id="exploreBtnRoadmap" class="btn-primary">
+    Explore Ecosystem
+</a>
         </div>
     </div>
 </section>
@@ -1156,6 +1165,50 @@ ABOUT ORIGIN WEB3 - REIMAGINED
 
 </section>
 
+<!-- ==========================================
+LATEST NEWS
+========================================== -->
+
+<section id="news" class="news">
+
+    <div class="container">
+
+        <div class="news-header">
+
+            <div>
+
+                <span class="section-tag">
+                    Latest Updates
+                </span>
+
+                <h2 class="section-title">
+                    Latest <span>News</span>
+                </h2>
+
+                <p class="section-text">
+                    Stay updated with the latest announcements, partnerships, roadmap progress and ecosystem developments.
+                </p>
+
+            </div>
+
+            <a href="news.html" class="view-news-btn">
+
+                View All News →
+
+            </a>
+
+        </div>
+
+        <div id="news-container" class="news-grid">
+
+            <!-- Supabase will load 4 cards here -->
+
+        </div>
+
+    </div>
+
+</section>
+
     <!-- ==========================================
 FOOTER
 ========================================== -->
@@ -1338,16 +1391,58 @@ FOOTER
 
 <button id="topBtn" aria-label="Back to top">
 
+    </button>
+
     ↑
 
-</button>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
+<script src="assets/js/supabase.js"></script>
+
+<script src="assets/js/news.js"></script>
 <script src="script.js"></script>
+
+<script>
+console.log("script.js is loading");
+</script>
+
+<script>
+
+const referralLinks = [
+
+"https://origindefi.io/#/invite?code=0xc5daf38Fa16B795dC99B12cBBB1f1Bc7E85A2ad6",
+
+"https://origindefi.io/#/invite?code=0x70f353641A18ea6877d5b96502896f0680e9a146",
+
+"https://origindefi.io/#/invite?code=0xe9A27Ce1c2910b0aA4571aA1Bbd14a13089213f0",
+
+"https://origindefi.io/#/invite?code=0x8736b6C7f097021E661D8d1882AF4054400E0C99",
+
+"https://origindefi.io/#/invite?code=0xD0A25330EBEb8283E7509739BdfB8a7e8102fF35"
+
+];
+
+const exploreBtn = document.getElementById("exploreBtnRoadmap");
+
+if (exploreBtn) {
+
+    exploreBtn.addEventListener("click", function(e){
+
+        e.preventDefault();
+
+        const randomIndex = Math.floor(Math.random() * referralLinks.length);
+
+        window.open(referralLinks[randomIndex], "_blank");
+
+    });
+
+}
+
+</script>
 
 </body>
 
 </html>
-
 
 
 

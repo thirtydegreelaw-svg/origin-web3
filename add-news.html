@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Add News | Origin Web3 CMS</title>
+
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/admin.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="login-wrapper">
+
+<div class="login-box" style="max-width:800px;">
+
+<h1>Add News</h1>
+
+<p>Publish a new article</p>
+
+<form id="newsForm">
+
+<input
+type="text"
+id="title"
+placeholder="News Title"
+required>
+
+<input
+type="text"
+id="slug"
+placeholder="Slug (example: origin-web3-launch)"
+required>
+
+<select id="category" required>
+
+<option value="">Select Category</option>
+
+<option>Announcement</option>
+
+<option>LGNS</option>
+
+<option>AI</option>
+
+<option>Partnership</option>
+
+<option>Roadmap</option>
+
+</select>
+
+<textarea
+id="short_description"
+placeholder="Short Description"
+rows="4"
+required></textarea>
+
+<textarea
+id="content"
+placeholder="Full Article"
+rows="12"
+required></textarea>
+
+<label class="upload-label">
+
+🖼 Upload News Image
+
+</label>
+
+<input
+type="file"
+id="image"
+accept="image/*"
+required>
+
+<button type="submit">
+
+🚀 Publish News
+
+</button>
+
+</form>
+
+<p id="message"></p>
+
+<br>
+
+<button onclick="location.href='dashboard.html'">
+
+⬅ Dashboard
+
+</button>
+
+</div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="assets/js/supabase.js"></script>
+
+<script src="assets/js/add-news.js"></script>
+
+</body>
+
+</html>
