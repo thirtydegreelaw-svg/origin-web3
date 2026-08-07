@@ -178,11 +178,11 @@
 
     display:grid;
 
-    grid-template-columns:420px 1fr;
+    grid-template-columns:1fr;
 
-    gap:60px;
+    justify-items:center;
 
-    align-items:start;
+    gap:40px;
 
 }
 

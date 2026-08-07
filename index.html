@@ -913,139 +913,62 @@ CONTACT SECTION
 
         <div class="contact-grid">
 
-            <!-- Left -->
-
-            <div class="contact-info">
-
-                <h3>
-
-                    Let's Build The
-                    Future Together
-
-                </h3>
-
-                <p>
-
-                    Whether you're a developer, investor,
-                    community member or business partner,
-                    we'd love to hear from you.
-
-                </p>
-
-                <div class="contact-card">
-
-                    <div class="contact-icon">
-
-                        <img src="assets/icons/email.svg"
-                        alt="Email">
-
-                    </div>
-
-                    <div>
-
-                        <h4>Email</h4>
-
-                        <span>
-                            contact@originweb3.org
-                        </span>
-
-                    </div>
-
-                </div>
-
-                <div class="contact-card">
-
-                    <div class="contact-icon">
-
-                        <img src="assets/icons/telegram.svg"
-                        alt="Telegram">
-
-                    </div>
-
-                    <div>
-
-                        <h4>Telegram</h4>
-
-                        <span>
-                            @OriginWeb3
-                        </span>
-
-                    </div>
-
-                </div>
-
-                <div class="contact-card">
-
-                    <div class="contact-icon">
-
-                        <img src="assets/icons/x.svg"
-                        alt="X">
-
-                    </div>
-
-                    <div>
-
-                        <h4>X (Twitter)</h4>
-
-                        <span>
-                            @OriginWeb3
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </div>
+            
 
             <!-- Right -->
 
-            <div class="contact-form-box">
+            <form class="contact-form" id="contactForm">
 
                 <form class="contact-form">
 
                     <div class="input-group">
 
                         <input
-                        type="text"
-                        placeholder="Your Name"
-                        required>
+    type="text"
+    id="name"
+    placeholder="Your Name"
+    required>
 
                     </div>
 
                     <div class="input-group">
 
                         <input
-                        type="email"
-                        placeholder="Your Email"
-                        required>
+    type="email"
+    id="email"
+    placeholder="Your Email"
+    required>
 
                     </div>
 
                     <div class="input-group">
 
                         <input
-                        type="text"
-                        placeholder="Subject"
-                        required>
+    type="text"
+    id="subject"
+    placeholder="Subject"
+    required>
 
                     </div>
 
                     <div class="input-group">
 
                         <textarea
-                        rows="6"
-                        placeholder="Write your message..."
-                        required></textarea>
+    id="message"
+    rows="6"
+    placeholder="Write your message..."
+    required></textarea>
 
                     </div>
 
                     <button
-                    type="submit"
-                    class="btn-primary">
+    type="submit"
+    class="btn-primary"
+    id="sendBtn">
 
-                        Send Message
+    Send Message
 
-                    </button>
+</button>
 
                 </form>
 
@@ -1055,13 +978,11 @@ CONTACT SECTION
 
     </div>
 
-</section>
-
-<!-- ==========================================
+    <!-- ==========================================
 SOCIAL LINKS
 ========================================== -->
 
-<div class="social-links">
+    <div class="social-links">
 
     <a href="https://signal.me/#yourusername" class="social-btn" target="_blank" aria-label="Signal">
         <img src="assets/icons/signal.svg" alt="Signal">
@@ -1096,7 +1017,6 @@ SOCIAL LINKS
 <!-- ==========================================
 ABOUT ORIGIN WEB3 - REIMAGINED
 ========================================== -->
-
 <section id="about" class="about">
 
     <div class="container">
@@ -1231,6 +1151,7 @@ LATEST NEWS
 <script src="assets/js/supabase.js"></script>
 
 <script src="assets/js/news.js"></script>
+<script src="assets/js/contact.js"></script>
 <script src="script.js"></script>
 
 </body>
