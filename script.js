@@ -1,6 +1,37 @@
 // ==========================================
-// ORIGIN WEB3 - MAIN SCRIPT
+// LOAD COMMON FOOTER
 // ==========================================
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const footerContainer = document.getElementById("footer-container");
+
+    if (!footerContainer) return;
+
+    fetch("footer.html")
+        .then(response => {
+
+            if (!response.ok) {
+                throw new Error("Footer not found");
+            }
+
+            return response.text();
+
+        })
+
+        .then(html => {
+
+            footerContainer.innerHTML = html;
+
+        })
+
+        .catch(error => {
+
+            console.error("Footer Error:", error);
+
+        });
+
+});
 
 // ==========================
 // SCROLL TO TOP
