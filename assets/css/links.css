@@ -1,0 +1,99 @@
+/* ==========================================
+ORIGIN WEB3 LINKS PAGE
+========================================== */
+
+body{
+
+    margin:0;
+
+    padding:40px 20px;
+
+    background:#0b0b0b;
+
+    font-family:Arial,sans-serif;
+
+    color:#fff;
+
+}
+
+.links-page{
+
+    max-width:550px;
+
+    margin:auto;
+
+    text-align:center;
+
+}
+
+.links-logo{
+
+    width:90px;
+
+    margin-bottom:20px;
+
+}
+
+.links-page h1{
+
+    font-size:38px;
+
+    color:#D4AF37;
+
+    margin:0;
+
+}
+
+.links-subtitle{
+
+    color:#bdbdbd;
+
+    margin-top:10px;
+
+    margin-bottom:40px;
+
+}
+
+.links-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.link-card{
+
+    display:block;
+
+    padding:18px;
+
+    border-radius:14px;
+
+    text-decoration:none;
+
+    background:#161616;
+
+    color:#fff;
+
+    font-weight:600;
+
+    border:1px solid rgba(212,175,55,.25);
+
+    transition:.3s;
+
+}
+
+.link-card:hover{
+
+    background:#D4AF37;
+
+    color:#111;
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 30px rgba(212,175,55,.25);
+
+}
