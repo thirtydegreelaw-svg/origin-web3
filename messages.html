@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Messages | Origin Web3 CMS</title>
+
+    <link rel="stylesheet" href="assets/css/admin.css">
+
+</head>
+
+
+
+
+<body>
+
+    <div class="login-wrapper">
+
+        <div class="login-box">
+
+            <h1>📬 Contact Messages</h1>
+
+            <p>Origin Web3 CMS</p>
+
+            <hr>
+
+<div id="messagesContainer">
+
+    <p>Loading messages...</p>
+
+</div>
+
+<br>
+
+<button id="backDashboard">
+
+    ⬅ Back to Dashboard
+
+</button>
+
+        </div>
+
+    </div>
+
+    
+
+<!-- ==========================================
+MESSAGE MODAL
+========================================== -->
+
+<div class="message-modal" id="messageModal">
+
+    <div class="modal-content">
+
+        <h2>📬 Contact Message</h2>
+
+        <p><strong>👤 Name:</strong></p>
+        <p id="modalName"></p>
+
+        <p><strong>📧 Email:</strong></p>
+        <p id="modalEmail"></p>
+
+        <p><strong>📝 Subject:</strong></p>
+        <p id="modalSubject"></p>
+
+        <p><strong>💬 Message:</strong></p>
+        <p id="modalMessage"></p>
+
+        <p><strong>📅 Date:</strong></p>
+        <p id="modalDate"></p>
+
+        <div class="modal-buttons">
+
+    <button class="delete-btn" id="deleteMessage">
+        🗑 Delete
+    </button>
+
+    <button class="close-btn" id="closeModal">
+        ✖ Close
+    </button>
+
+</div>
+
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="assets/js/supabase.js"></script>
+
+<script src="assets/js/messages.js"></script>
+
+
+</body>
+
+</html>
